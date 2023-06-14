@@ -1,1 +1,3 @@
-front page
+<?php 
+   get_header()
+?>
