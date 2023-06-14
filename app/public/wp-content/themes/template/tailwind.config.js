@@ -5,14 +5,9 @@ module.exports = {
       "./src/**/*.jsx"
    ],
    safelist: [
-      "current-menu-item",
-      "current_page_parent"
+      
    ],
    theme: {
-      fontFamily: {
-         sans: ["Wix Madefor Text", "sans-serif"],
-         cursive: ["Fugaz One", "cursive"]
-      },
       extend: {
 
       },
