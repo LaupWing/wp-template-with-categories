@@ -13,3 +13,23 @@ function addSupport(){
 }
 
 add_action("after_setup_theme", "addSupport");
+
+
+function generatePosts() {
+   $categories = array();
+   for ($i = 1; $i <= 20; $i++){
+      $post_title = "Dummy Post {$i}";
+      $post_content = "This is the content of Dummy Post {$i}";
+      $post_status = "publish";
+
+      $new_post = array(
+         "post_title" => $post_title,
+         "post_content" => $post_content,
+         "post_status" => $post_status,
+         "post_category" => array()
+      );
+
+      wp_insert_post($new_post);
+      
+   }
+}
