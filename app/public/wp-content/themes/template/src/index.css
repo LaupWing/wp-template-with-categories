@@ -28,11 +28,16 @@
    .menu {
       @apply flex gap-4;
    }
-   .menu .menu-item {
-      @apply relative;
+   .menu .menu-item,  
+   .menu .menu-item .sub-menu .menu-item{
+      @apply relative px-4;
    }
 
    .menu .menu-item .sub-menu{
-      @apply absolute;
+      @apply absolute bg-white bottom-0 left-0 translate-y-full shadow;
+   }
+
+   .menu .menu-item .sub-menu .menu-item{
+      @apply  py-1;
    }
 }
