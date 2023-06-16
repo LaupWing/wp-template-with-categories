@@ -26,6 +26,9 @@
 
 @layer base {
    .menu {
-      @apply flex;
+      @apply flex gap-4;
+   }
+   .menu .menu-item {
+      @apply relative;
    }
 }
