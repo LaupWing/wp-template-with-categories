@@ -31,4 +31,8 @@
    .menu .menu-item {
       @apply relative;
    }
+
+   .menu .menu-item .sub-menu{
+      @apply absolute;
+   }
 }
