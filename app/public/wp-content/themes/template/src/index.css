@@ -23,3 +23,9 @@
       --screen-height-dynamic: 100dvh;
    }
 }
+
+@layer base {
+   .menu {
+      @apply flex;
+   }
+}

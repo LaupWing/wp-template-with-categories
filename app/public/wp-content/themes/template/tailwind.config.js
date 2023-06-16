@@ -5,7 +5,7 @@ module.exports = {
       "./src/**/*.jsx"
    ],
    safelist: [
-      
+      "menu" 
    ],
    theme: {
       extend: {
