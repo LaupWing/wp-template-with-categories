@@ -6,7 +6,7 @@
    <?php wp_head() ?>
 </head>
 <body <?php body_class() ?>>
-   <header class="py-4 flex justify-center max-w-6xl mx-auto">
+   <header class="items-center h-nav bg-orange-100 flex justify-center max-w-6xl mx-auto">
       <div class="container flex justify-between items-center">
          <div class="flex items-end">
             <h1 class="font-bold mr-8 text-xl font-cursive">Template</h1>
