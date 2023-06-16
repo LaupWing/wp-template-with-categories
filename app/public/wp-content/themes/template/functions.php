@@ -17,19 +17,26 @@ add_action("after_setup_theme", "addSupport");
 
 function generatePosts() {
    $categories = array(3, 4, 5, 6);
-   for ($i = 1; $i <= 20; $i++){
-      $post_title = "Dummy Post {$i}";
-      $post_content = "This is the content of Dummy Post {$i}";
-      $post_status = "publish";
+   $post_count = wp_count_posts()->publish;
 
-      $new_post = array(
-         "post_title" => $post_title,
-         "post_content" => $post_content,
-         "post_status" => $post_status,
-         "post_category" => array(array_rand($categories))
-      );
-
-      wp_insert_post($new_post);
-      
+   if($post_count === 0){
+      for ($i = 1; $i <= 20; $i++){
+         $post_title = "Dummy Post {$i}";
+         $post_content = "This is the content of Dummy Post {$i}";
+         $post_status = "publish";
+         $post_category = array($categories[array_rand($categories)]);
+         
+         $new_post = array(
+            "post_title" => $post_title,
+            "post_content" => $post_content,
+            "post_status" => $post_status,
+            "post_category" => $post_category
+         );
+   
+         wp_insert_post($new_post);
+         
+      }
    }
 }
+
+add_action("init", "generatePosts");
