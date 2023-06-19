@@ -107,10 +107,11 @@ function renderQuestionMetabox($post) {
                let template = document.querySelector("#new-question-checkbox-template").innerHTML
                template = template.replace(/{index}/g, <?php  echo count($questions); ?> ) 
                wrapper.innerHTML = template
-               wrapper.firstChild.querySelector("button.add").addEventListener("click", () => {
+               console.log(wrapper.firstElementChild)
+               wrapper.firstElementChild.querySelector("button.add").addEventListener("click", () => {
                   alert("works")
                })
-               document.querySelector("#question_metabox").insertAdjacentElement("beforeend", wrapper.firstChild)
+               document.querySelector("#question_metabox").insertAdjacentElement("beforeend", wrapper.firstElementChild)
             }
          })
       })
@@ -130,10 +131,20 @@ function render_question_field($index, $questionText) {
 function render_question_checkbox_field($index, $questionText) {
    ?>
       <div class="question">
-         <label for="question-<?php echo $index; ?>">Question Checkbox <?php echo is_string($index) ? $index : $index  + 1; ?></label>
-         <input type="text" id="question-<?php echo $index; ?>" name="questions[<?php echo $index; ?>][question_text]" value="<?php echo esc_attr($questionText); ?>">
+         <label 
+            for="question-<?php echo $index; ?>"
+         >
+            Question Checkbox <?php echo is_string($index) ? $index : $index  + 1; ?>
+         </label>
+         <input 
+            type="text" 
+            id="question-<?php echo $index; ?>" 
+            name="questions[<?php echo $index; ?>][question_text]" 
+            value="<?php echo esc_attr($questionText); ?>"
+         >
          <div class="options">
-            <button class="add">Add option</button>
+            <input type="text">
+            <button type="button" class="add">Add option</button>
          </div>
       </div>
    <?php
