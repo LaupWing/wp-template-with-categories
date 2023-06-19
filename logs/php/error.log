@@ -337,3 +337,7 @@ Stack trace:
   thrown in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-includes\plugin.php on line 441
 [19-Jun-2023 13:16:42 UTC] PHP Warning:  Undefined array key "questions" in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php on line 191
 [19-Jun-2023 13:16:55 UTC] PHP Warning:  Undefined array key "questions" in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php on line 191
+[19-Jun-2023 13:27:52 UTC] PHP Warning:  Undefined array key 0 in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php on line 77
+[19-Jun-2023 13:27:52 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php on line 77
+[19-Jun-2023 13:27:54 UTC] PHP Warning:  Undefined array key 0 in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php on line 77
+[19-Jun-2023 13:27:54 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php on line 77
