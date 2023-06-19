@@ -78,3 +78,21 @@
 [16-Jun-2023 14:57:26 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php on line 24
 [16-Jun-2023 14:57:26 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php on line 24
 [16-Jun-2023 14:57:26 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php on line 24
+[19-Jun-2023 08:55:24 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + int in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php:121
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php(95): render_question_field('{index}', '')
+#1 C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-admin\includes\template.php(1445): render_question_metabox(Object(WP_Post), Array)
+#2 C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-admin\edit-form-advanced.php(688): do_meta_boxes(Object(WP_Screen), 'normal', Object(WP_Post))
+#3 C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-admin\post-new.php(75): require('C:\\Users\\pin-d\\...')
+#4 {main}
+  thrown in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php on line 121
+[19-Jun-2023 08:55:24 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
+[19-Jun-2023 08:55:24 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368
+[19-Jun-2023 08:57:55 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + int in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php:121
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php(95): render_question_field('{index}', '')
+#1 C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-admin\includes\template.php(1445): render_question_metabox(Object(WP_Post), Array)
+#2 C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-admin\edit-form-advanced.php(688): do_meta_boxes(Object(WP_Screen), 'normal', Object(WP_Post))
+#3 C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-admin\post-new.php(75): require('C:\\Users\\pin-d\\...')
+#4 {main}
+  thrown in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php on line 121
