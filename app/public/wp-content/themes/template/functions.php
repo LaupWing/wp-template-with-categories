@@ -77,7 +77,6 @@ function renderQuestionMetabox($post) {
       <div>
          <select name="type" id="type">
             <option value="text">Text</option>
-            <option value="radio">Radio</option>
             <option value="checkbox">Checkbox</option>
          </select>
          <button type='button' id='add-new-question'>Add New Question</button>
