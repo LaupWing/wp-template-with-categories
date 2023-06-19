@@ -59,4 +59,42 @@ function registerPostTypes() {
 
 add_action("init", "initialize");
 
+function addMetaBoxes(){
+   add_meta_box(
+      "question_metabox",
+      "Question Form Step",
+      "renderQuestionMetabox",
+      "question_form_step",
+      "normal",
+      "high"
+   );
+}
+
+function renderQuestionMetabox($post) {
+   echo "<button type='button' id='add-new-question'>Add New Question</button>";
+
+   // Hidden template for creating new questions
+   echo "<div id='new-question-template' style='display: none;'>";
+   render_question_field(0, "");
+   echo "</div>";
+   ?>
+   <script>
+      document.addEventListener("DOMContentLoaded", () => {
+         document.querySelector("#add-new-question").addEventListener("click", )
+      })
+   </script>
+   <?php
+}
+
+function render_question_field($index, $questionText) {
+   ?>
+      <div class="question">
+         <label for="question-<?php echo $index; ?>">Question <?php echo $index + 1; ?></label>
+         <input type="text" id="question-<?php echo $index; ?>" name="questions[<?php echo $index; ?>][question_text]" value="<?php echo esc_attr($questionText); ?>">
+      </div>
+   <?php
+}
+
+add_action("add_meta_boxes", "addMetaBoxes");
+
 
