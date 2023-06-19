@@ -103,9 +103,14 @@ function renderQuestionMetabox($post) {
                document.querySelector("#question_metabox").insertAdjacentHTML("beforeend", template)
             }
             if (choice === "checkbox") {
+               const wrapper = document.createElement("div")
                let template = document.querySelector("#new-question-checkbox-template").innerHTML
                template = template.replace(/{index}/g, <?php  echo count($questions); ?> ) 
-               document.querySelector("#question_metabox").insertAdjacentHTML("beforeend", template)
+               wrapper.innerHTML = template
+               wrapper.firstChild.querySelector("button.add").addEventListener("click", () => {
+                  alert("works")
+               })
+               document.querySelector("#question_metabox").insertAdjacentElement("beforeend", wrapper.firstChild)
             }
          })
       })
@@ -128,7 +133,7 @@ function render_question_checkbox_field($index, $questionText) {
          <label for="question-<?php echo $index; ?>">Question Checkbox <?php echo is_string($index) ? $index : $index  + 1; ?></label>
          <input type="text" id="question-<?php echo $index; ?>" name="questions[<?php echo $index; ?>][question_text]" value="<?php echo esc_attr($questionText); ?>">
          <div class="options">
-            <button>Add option</button>
+            <button class="add">Add option</button>
          </div>
       </div>
    <?php
