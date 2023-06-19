@@ -39,4 +39,5 @@ function generatePosts() {
    }
 }
 
-add_action("init", "generatePosts");
+// add_action("init", "generatePosts");
+
