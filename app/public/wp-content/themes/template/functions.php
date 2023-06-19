@@ -71,6 +71,10 @@ function addMetaBoxes(){
 }
 
 function renderQuestionMetabox($post) {
+   $questions = get_post_meta($post->ID, "questions", true);
+   $questions = !empty($questions) ? $questions : array();
+   print_r($questions);
+
    echo "<button type='button' id='add-new-question'>Add New Question</button>";
 
    // Hidden template for creating new questions
@@ -80,7 +84,11 @@ function renderQuestionMetabox($post) {
    ?>
    <script>
       document.addEventListener("DOMContentLoaded", () => {
-         document.querySelector("#add-new-question").addEventListener("click", )
+         document.querySelector("#add-new-question").addEventListener("click", () => {
+            const template = document.querySelector("#new-question-template").innerHTML
+            // template = 
+            console.log(template)
+         })
       })
    </script>
    <?php
