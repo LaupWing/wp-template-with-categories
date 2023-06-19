@@ -92,6 +92,8 @@ function renderQuestionMetabox($post) {
    <script>
       document.addEventListener("DOMContentLoaded", () => {
          document.querySelector("#add-new-question").addEventListener("click", () => {
+            const choice = document.querySelector("#type").value
+            
             let template = document.querySelector("#new-question-template").innerHTML
             template = template.replace(/{index}/g, <?php  echo count($questions); ?> ) 
             document.querySelector("#question_metabox").insertAdjacentHTML("beforeend", template)
@@ -102,6 +104,15 @@ function renderQuestionMetabox($post) {
 }
 
 function render_question_field($index, $questionText) {
+   ?>
+      <div class="question">
+         <label for="question-<?php echo $index; ?>">Question <?php echo is_string($index) ? $index : $index  + 1; ?></label>
+         <input type="text" id="question-<?php echo $index; ?>" name="questions[<?php echo $index; ?>][question_text]" value="<?php echo esc_attr($questionText); ?>">
+      </div>
+   <?php
+}
+
+function render_question_checkbox_field($index, $questionText) {
    ?>
       <div class="question">
          <label for="question-<?php echo $index; ?>">Question <?php echo is_string($index) ? $index : $index  + 1; ?></label>
