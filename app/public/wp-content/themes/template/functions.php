@@ -85,9 +85,9 @@ function renderQuestionMetabox($post) {
    <script>
       document.addEventListener("DOMContentLoaded", () => {
          document.querySelector("#add-new-question").addEventListener("click", () => {
-            const template = document.querySelector("#new-question-template").innerHTML
-            // template = 
-            console.log(template)
+            let template = document.querySelector("#new-question-template").innerHTML
+            template = template.replace(/{index}/g, <?php  echo count($questions); ?> ) 
+            document.querySelector("#question_metabox").insertAdjacentHTML("beforeend", template)
          })
       })
    </script>
