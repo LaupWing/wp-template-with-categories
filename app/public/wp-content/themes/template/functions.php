@@ -108,8 +108,17 @@ function renderQuestionMetabox($post) {
                template = template.replace(/{index}/g, <?php  echo count($questions); ?> ) 
                wrapper.innerHTML = template
                
-               wrapper.firstElementChild.querySelector("button.add").addEventListener("click", () => {
-                  alert("works")
+               wrapper.firstElementChild.querySelector("button.add").addEventListener("click", (e) => {
+                  const container = e.target.closest(".question") 
+            
+                  const value = container.querySelector(".add-option input").value
+                  const li = `
+                     <li>
+                        <input type="text" value="${value}">
+                        <button type="button">Delete</button>
+                     </li>
+                  `
+                  container.querySelector("ul.options").insertAdjacentHTML("beforeend", li)
                })
                document.querySelector("#question_metabox").insertAdjacentElement("beforeend", wrapper.firstElementChild)
             }
@@ -156,7 +165,9 @@ function render_question_checkbox_field($index, $questionText) {
                <input type="text" placeholder="option">
                <button type="button" class="add">Add option</button>
             </div>
-            <ul class="options"></ul>
+            <ul class="options">
+               
+            </ul>
          </div>
       </div>
    <?php
