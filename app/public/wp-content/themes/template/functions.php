@@ -73,7 +73,6 @@ function addMetaBoxes(){
 function renderQuestionMetabox($post) {
    $questions = get_post_meta($post->ID, "questions", true);
    $questions = !empty($questions) ? $questions : array();
-   print_r($questions);
 
    echo "<button type='button' id='add-new-question'>Add New Question</button>";
 
