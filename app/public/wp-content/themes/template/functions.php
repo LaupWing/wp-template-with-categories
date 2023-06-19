@@ -95,16 +95,17 @@ function renderQuestionMetabox($post) {
    <script>
       document.addEventListener("DOMContentLoaded", () => {
          document.querySelector("#add-new-question").addEventListener("click", () => {
+            const questionCount = document.querySelectorAll(".question").length
             const choice = document.querySelector("#type").value
             if (choice === "text") {
                let template = document.querySelector("#new-question-template").innerHTML
-               template = template.replace(/{index}/g, <?php  echo count($questions); ?> ) 
+               template = template.replace(/{index}/g, questionCount)
                document.querySelector("#question_metabox").insertAdjacentHTML("beforeend", template)
             }
             if (choice === "checkbox") {
                const wrapper = document.createElement("div")
                let template = document.querySelector("#new-question-checkbox-template").innerHTML
-               template = template.replace(/{index}/g, <?php  echo count($questions); ?> ) 
+               template = template.replace(/{index}/g, questionCount) 
                wrapper.innerHTML = template
                
                wrapper.firstElementChild.querySelector("button.add").addEventListener("click", (e) => {
@@ -113,7 +114,7 @@ function renderQuestionMetabox($post) {
                   const value = container.querySelector(".add-option input").value
                   const li = `
                      <li>
-                        <input type="text" name="questions[<?php  echo count($questions); ?>][options][]" value="${value}">
+                        <input type="text" name="questions[${questionCount}][options][]" value="${value}">
                         <button type="button">Delete</button>
                      </li>
                   `
