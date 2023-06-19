@@ -107,7 +107,7 @@ function renderQuestionMetabox($post) {
                let template = document.querySelector("#new-question-checkbox-template").innerHTML
                template = template.replace(/{index}/g, <?php  echo count($questions); ?> ) 
                wrapper.innerHTML = template
-               console.log(wrapper.firstElementChild)
+               
                wrapper.firstElementChild.querySelector("button.add").addEventListener("click", () => {
                   alert("works")
                })
@@ -143,7 +143,7 @@ function render_question_checkbox_field($index, $questionText) {
             value="<?php echo esc_attr($questionText); ?>"
          >
          <div class="options">
-            <input type="text">
+            <input type="text" placeholder="option">
             <button type="button" class="add">Add option</button>
          </div>
       </div>
