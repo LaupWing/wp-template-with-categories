@@ -130,6 +130,11 @@ function renderQuestionMetabox($post) {
 function render_question_field($index, $questionText) {
    ?>
       <div class="question">
+         <input 
+            type="hidden" 
+            name="questions[<?php echo $index; ?>][type]"
+            value="text"
+         >
          <label 
             for="question-<?php echo $index; ?>"
          >
@@ -154,6 +159,11 @@ function render_question_checkbox_field($index, $questionText) {
             Question Checkbox <?php echo is_string($index) ? $index : $index  + 1; ?>
          </label>
          <input 
+            type="hidden" 
+            name="questions[<?php echo $index; ?>][type]"
+            value="checkbox"
+         >
+         <input 
             type="text" 
             id="question-<?php echo $index; ?>" 
             name="questions[<?php echo $index; ?>][question_text]" 
@@ -175,4 +185,4 @@ function render_question_checkbox_field($index, $questionText) {
 add_action("add_meta_boxes", "addMetaBoxes");
 
 
-add_action("save_post_question_form_step");
+// add_action("save_post_question_form_step");
