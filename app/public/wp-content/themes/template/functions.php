@@ -75,7 +75,7 @@ function renderQuestionMetabox($post) {
 
    // Hidden template for creating new questions
    echo "<div id='new-question-template' style='display: none;'>";
-   render_question_field(0, "");
+   render_question_field("{index}", "");
    echo "</div>";
    ?>
    <script>
@@ -89,7 +89,7 @@ function renderQuestionMetabox($post) {
 function render_question_field($index, $questionText) {
    ?>
       <div class="question">
-         <label for="question-<?php echo $index; ?>">Question <?php echo $index + 1; ?></label>
+         <label for="question-<?php echo $index; ?>">Question <?php echo is_string($index) ? $index : $index  + 1; ?></label>
          <input type="text" id="question-<?php echo $index; ?>" name="questions[<?php echo $index; ?>][question_text]" value="<?php echo esc_attr($questionText); ?>">
       </div>
    <?php
