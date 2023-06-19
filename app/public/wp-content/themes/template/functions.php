@@ -73,8 +73,16 @@ function addMetaBoxes(){
 function renderQuestionMetabox($post) {
    $questions = get_post_meta($post->ID, "questions", true);
    $questions = !empty($questions) ? $questions : array();
-
-   echo "<button type='button' id='add-new-question'>Add New Question</button>";
+   ?>
+      <div>
+         <select name="type" id="type">
+            <option value="text">Text</option>
+            <option value="radio">Radio</option>
+            <option value="checkbox">Checkbox</option>
+         </select>
+         <button type='button' id='add-new-question'>Add New Question</button>
+      </div>
+   <?php
 
    // Hidden template for creating new questions
    echo "<div id='new-question-template' style='display: none;'>";
