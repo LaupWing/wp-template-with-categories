@@ -95,7 +95,8 @@ function renderQuestionMetabox($post) {
    <script>
       document.addEventListener("DOMContentLoaded", () => {
          document.querySelector("#add-new-question").addEventListener("click", () => {
-            const questionCount = document.querySelectorAll(".question").length
+            const questionCount = document.querySelectorAll("#question_metabox > .question").length
+            
             const choice = document.querySelector("#type").value
             if (choice === "text") {
                let template = document.querySelector("#new-question-template").innerHTML
@@ -185,5 +186,34 @@ function render_question_checkbox_field($index, $questionText) {
 
 add_action("add_meta_boxes", "addMetaBoxes");
 
+function saveQuestionMetabox($post_id) {
+   if (isset($_POST['questions'])) {
+      $questions = $_POST['questions'];
 
-// add_action("save_post_question_form_step");
+      $formattedQuestions = array();
+      foreach ($questions as $question) {
+         $questionType = $question['type'];
+         $questionText = $question['question_text'];
+
+         if ($questionType === 'text') {
+            // Text question
+            $formattedQuestions[] = array(
+               'type' => 'text',
+               'question_text' => $questionText
+            );
+         } elseif ($questionType === 'checkbox') {
+            // Checkbox question
+            $options = isset($question['options']) ? $question['options'] : array();
+            $formattedQuestions[] = array(
+               'type' => 'checkbox',
+               'question_text' => $questionText,
+               'options' => $options
+            );
+         }
+      }
+
+      update_field('questions', $formattedQuestions, $post_id); // Assuming 'questions' is the ACF field key
+   }
+}
+
+add_action("save_post_question_form_step", "saveQuestionMetabox");

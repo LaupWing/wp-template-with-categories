@@ -335,3 +335,5 @@ Stack trace:
 #4 C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\pin-d\\...')
 #5 {main}
   thrown in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-includes\plugin.php on line 441
+[19-Jun-2023 13:16:42 UTC] PHP Warning:  Undefined array key "questions" in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php on line 191
+[19-Jun-2023 13:16:55 UTC] PHP Warning:  Undefined array key "questions" in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php on line 191
