@@ -73,6 +73,8 @@ function addMetaBoxes(){
 function renderQuestionMetabox($post) {
    $questions = get_post_meta($post->ID, "questions", true);
    $questions = !empty($questions) ? $questions : array();
+   
+   print_r($questions[0]["options"]);
    ?>
       <div>
          <select name="type" id="type">
