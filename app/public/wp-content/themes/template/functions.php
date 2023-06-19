@@ -127,6 +127,9 @@ function render_question_checkbox_field($index, $questionText) {
       <div class="question">
          <label for="question-<?php echo $index; ?>">Question Checkbox <?php echo is_string($index) ? $index : $index  + 1; ?></label>
          <input type="text" id="question-<?php echo $index; ?>" name="questions[<?php echo $index; ?>][question_text]" value="<?php echo esc_attr($questionText); ?>">
+         <div class="options">
+            <button>Add option</button>
+         </div>
       </div>
    <?php
 }
