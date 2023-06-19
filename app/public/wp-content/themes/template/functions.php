@@ -151,9 +151,12 @@ function render_question_checkbox_field($index, $questionText) {
             name="questions[<?php echo $index; ?>][question_text]" 
             value="<?php echo esc_attr($questionText); ?>"
          >
-         <div class="options">
-            <input type="text" placeholder="option">
-            <button type="button" class="add">Add option</button>
+         <div class="options-container">
+            <div class="add-option">
+               <input type="text" placeholder="option">
+               <button type="button" class="add">Add option</button>
+            </div>
+            <ul class="options"></ul>
          </div>
       </div>
    <?php
