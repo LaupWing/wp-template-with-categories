@@ -88,15 +88,25 @@ function renderQuestionMetabox($post) {
    echo "<div id='new-question-template' style='display: none;'>";
    render_question_field("{index}", "");
    echo "</div>";
+
+   echo "<div id='new-question-checkbox-template' style='display: none;'>";
+   render_question_checkbox_field("{index}", "");
+   echo "</div>";
    ?>
    <script>
       document.addEventListener("DOMContentLoaded", () => {
          document.querySelector("#add-new-question").addEventListener("click", () => {
             const choice = document.querySelector("#type").value
-            
-            let template = document.querySelector("#new-question-template").innerHTML
-            template = template.replace(/{index}/g, <?php  echo count($questions); ?> ) 
-            document.querySelector("#question_metabox").insertAdjacentHTML("beforeend", template)
+            if (choice === "text") {
+               let template = document.querySelector("#new-question-template").innerHTML
+               template = template.replace(/{index}/g, <?php  echo count($questions); ?> ) 
+               document.querySelector("#question_metabox").insertAdjacentHTML("beforeend", template)
+            }
+            if (choice === "checkbox") {
+               let template = document.querySelector("#new-question-checkbox-template").innerHTML
+               template = template.replace(/{index}/g, <?php  echo count($questions); ?> ) 
+               document.querySelector("#question_metabox").insertAdjacentHTML("beforeend", template)
+            }
          })
       })
    </script>
@@ -115,7 +125,7 @@ function render_question_field($index, $questionText) {
 function render_question_checkbox_field($index, $questionText) {
    ?>
       <div class="question">
-         <label for="question-<?php echo $index; ?>">Question <?php echo is_string($index) ? $index : $index  + 1; ?></label>
+         <label for="question-<?php echo $index; ?>">Question Checkbox <?php echo is_string($index) ? $index : $index  + 1; ?></label>
          <input type="text" id="question-<?php echo $index; ?>" name="questions[<?php echo $index; ?>][question_text]" value="<?php echo esc_attr($questionText); ?>">
       </div>
    <?php
