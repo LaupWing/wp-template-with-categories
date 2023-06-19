@@ -113,7 +113,7 @@ function renderQuestionMetabox($post) {
                   const value = container.querySelector(".add-option input").value
                   const li = `
                      <li>
-                        <input type="text" value="${value}">
+                        <input type="text" name="questions[<?php  echo count($questions); ?>][options][]" value="${value}">
                         <button type="button">Delete</button>
                      </li>
                   `
