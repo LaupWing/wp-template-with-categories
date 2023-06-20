@@ -1,4 +1,3 @@
-import Radio from "../Radio"
 import RadioImage from "../RadioImage"
 
 export default () => {
