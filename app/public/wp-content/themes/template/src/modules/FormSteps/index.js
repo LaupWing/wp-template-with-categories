@@ -1,4 +1,4 @@
-const {render, useState} = wp.element
+const {render, useState, useEffect} = wp.element
 import Step1 from "./Steps/Step1"
 import Step2 from "./Steps/Step2"
 import Step3 from "./Steps/Step3"
@@ -13,18 +13,24 @@ const FormSteps = () => {
       plafonds: null,
       dak: null,
       details: null,
-      gebruiker: null
+      gebruiker: null,
+      ...(localStorage.getItem("formData") ? 
+         JSON.parse(localStorage.getItem("formData")) : {}
+      )
    })
    // Object.values(formData).filter(x => x).length
    const [currentStep, setCurrentStep] = useState(0)
-
+   
    const update = (e) => {
       setFormData(prev => ({
          ...prev,
          ...e
       }))
    }
-   console.log(formData)
+   
+   useEffect(() => {
+      localStorage.setItem("formData", JSON.stringify(formData))
+   }, [formData])
    
    return (
       <section className="flex-1 flex flex-col bg-main my-10 rounded shadow p-10">

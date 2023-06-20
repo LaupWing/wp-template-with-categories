@@ -480,7 +480,8 @@ __webpack_require__.r(__webpack_exports__);
 
 const {
   render,
-  useState
+  useState,
+  useEffect
 } = wp.element;
 
 
@@ -495,7 +496,8 @@ const FormSteps = () => {
     plafonds: null,
     dak: null,
     details: null,
-    gebruiker: null
+    gebruiker: null,
+    ...(localStorage.getItem("formData") ? JSON.parse(localStorage.getItem("formData")) : {})
   });
   // Object.values(formData).filter(x => x).length
   const [currentStep, setCurrentStep] = useState(0);
@@ -505,7 +507,9 @@ const FormSteps = () => {
       ...e
     }));
   };
-  console.log(formData);
+  useEffect(() => {
+    localStorage.setItem("formData", JSON.stringify(formData));
+  }, [formData]);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
     className: "flex-1 flex flex-col bg-main my-10 rounded shadow p-10"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
