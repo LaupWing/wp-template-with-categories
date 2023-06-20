@@ -4,7 +4,7 @@ import RadioImage from "../RadioImage"
 export default () => {
    return (
       <div className="flex flex-1">
-         <div className="flex-1 flex items-center flex-col">
+         <div className="flex-1 flex items-center flex-col w-full sm:w-3/5">
             <h3 className="text-2xl">Gaat het alleen om wanden? Of ook plafonds?</h3>
             <div className="mt-6 flex flex-col gap-6">
                <div className="grid gap-2 grid-cols-2">

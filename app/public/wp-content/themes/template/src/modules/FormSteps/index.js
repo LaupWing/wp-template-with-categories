@@ -16,7 +16,7 @@ const FormSteps = () => {
       gebruiker: null
    })
    // Object.values(formData).filter(x => x).length
-   const [currentStep, setCurrentStep] = useState(5)
+   const [currentStep, setCurrentStep] = useState(0)
    
    return (
       <section className="flex-1 flex flex-col bg-main my-10 rounded shadow p-10">
