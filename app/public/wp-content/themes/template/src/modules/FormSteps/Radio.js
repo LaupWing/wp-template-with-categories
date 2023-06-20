@@ -1,7 +1,8 @@
 export default ({
    name,
    values,
-   label
+   label,
+   onChange
 }) => {
    return (
       <div className="flex flex-col text-lg">
@@ -11,6 +12,7 @@ export default ({
                <Option 
                   value={value}
                   name={name}
+                  onChange={onChange}
                />
             ))}
          </div>
@@ -20,7 +22,8 @@ export default ({
 
 const Option = ({
    value,
-   name
+   name,
+   onChange
 }) => {
    const id = `${name}_${value}` 
    return (
@@ -30,6 +33,7 @@ const Option = ({
             name={name} 
             id={id} 
             value={value}
+            onChange={onChange}
          />
          <label 
             htmlFor={id}

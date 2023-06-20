@@ -28,6 +28,7 @@ export default ({
                         value={plafond.value}
                         onChange={() => update({
                            step3: {
+                              ...formData.step3,
                               [plafond.name]: plafond.value
                            }
                         })}
@@ -39,6 +40,14 @@ export default ({
                   label={"Schikt uw woning over een uitbouw?"}
                   name={"uitbouw"}
                   values={["ja", "nee"]}
+                  onChange={(e) => {
+                     update({
+                        step3: {
+                           ...formData.step3,
+                           "uitbouw": e.target.value
+                        }
+                     })
+                  }}
                />
                <Radio 
                   label={"Beschikt uw woning over een inpandige garage?"}

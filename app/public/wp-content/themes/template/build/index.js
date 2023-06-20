@@ -56,7 +56,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (({
   name,
   values,
-  label
+  label,
+  onChange
 }) => {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-col text-lg"
@@ -66,12 +67,14 @@ __webpack_require__.r(__webpack_exports__);
     className: "flex gap-4 mt-1"
   }, values.map(value => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Option, {
     value: value,
-    name: name
+    name: name,
+    onChange: onChange
   }))));
 });
 const Option = ({
   value,
-  name
+  name,
+  onChange
 }) => {
   const id = `${name}_${value}`;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -80,7 +83,8 @@ const Option = ({
     type: "radio",
     name: name,
     id: id,
-    value: value
+    value: value,
+    onChange: onChange
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
     htmlFor: id,
     className: "capitalize"
@@ -283,6 +287,7 @@ __webpack_require__.r(__webpack_exports__);
     value: plafond.value,
     onChange: () => update({
       step3: {
+        ...formData.step3,
         [plafond.name]: plafond.value
       }
     }),
@@ -290,7 +295,15 @@ __webpack_require__.r(__webpack_exports__);
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Radio__WEBPACK_IMPORTED_MODULE_1__["default"], {
     label: "Schikt uw woning over een uitbouw?",
     name: "uitbouw",
-    values: ["ja", "nee"]
+    values: ["ja", "nee"],
+    onChange: e => {
+      update({
+        step3: {
+          ...formData.step3,
+          "uitbouw": e.target.value
+        }
+      });
+    }
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Radio__WEBPACK_IMPORTED_MODULE_1__["default"], {
     label: "Beschikt uw woning over een inpandige garage?",
     name: "inpandige_garage",
