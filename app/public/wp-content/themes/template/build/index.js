@@ -307,6 +307,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Number__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Number */ "./src/modules/FormSteps/Number.js");
+/* harmony import */ var _Radio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Radio */ "./src/modules/FormSteps/Radio.js");
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
@@ -326,6 +328,14 @@ __webpack_require__.r(__webpack_exports__);
     value: 250,
     name: "plafondhoogte",
     unit: "cm"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Radio__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    label: "Hoeveel verdiepingen heeft uw woning? *",
+    name: "verdiepingen",
+    values: ["1", "2", "3", "4"]
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Radio__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    label: "Heeft uw bovenste verdieping binnenwanden? *",
+    name: "bovenste_verdieping_binnenwanden",
+    values: ["ja", "nee"]
   }))));
 });
 

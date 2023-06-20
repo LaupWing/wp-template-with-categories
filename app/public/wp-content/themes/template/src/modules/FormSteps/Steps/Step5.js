@@ -1,4 +1,5 @@
 import Number from "../Number"
+import Radio from "../Radio"
 
 export default () => {
    return (
@@ -16,6 +17,16 @@ export default () => {
                   value={250}
                   name={"plafondhoogte"}
                   unit={"cm"}
+               />
+               <Radio 
+                  label={"Hoeveel verdiepingen heeft uw woning? *"}
+                  name={"verdiepingen"}
+                  values={["1", "2", "3", "4"]}
+               />
+               <Radio 
+                  label={"Heeft uw bovenste verdieping binnenwanden? *"}
+                  name={"bovenste_verdieping_binnenwanden"}
+                  values={["ja", "nee"]}
                />
             </div>
          </div>
