@@ -282,9 +282,11 @@ __webpack_require__.r(__webpack_exports__);
     name: plafond.name,
     value: plafond.value,
     onChange: () => update({
-      [plafond.name]: plafond.value
+      step3: {
+        [plafond.name]: plafond.value
+      }
     }),
-    checked: formData[plafond.name] === plafond.value
+    checked: formData.step3 && formData.step3[plafond.name] === plafond.value
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Radio__WEBPACK_IMPORTED_MODULE_1__["default"], {
     label: "Schikt uw woning over een uitbouw?",
     name: "uitbouw",

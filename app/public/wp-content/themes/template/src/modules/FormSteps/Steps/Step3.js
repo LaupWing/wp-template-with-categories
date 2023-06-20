@@ -27,9 +27,11 @@ export default ({
                         name={plafond.name}
                         value={plafond.value}
                         onChange={() => update({
-                           [plafond.name]: plafond.value
+                           step3: {
+                              [plafond.name]: plafond.value
+                           }
                         })}
-                        checked={formData[plafond.name] === plafond.value}
+                        checked={formData.step3 && formData.step3[plafond.name] === plafond.value}
                      />
                   ))}
                </div>
