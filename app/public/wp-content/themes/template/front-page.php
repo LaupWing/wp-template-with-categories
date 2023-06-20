@@ -26,7 +26,7 @@
                <div class="flex flex-1">
                   <div class="flex-1 flex items-center flex-col">
                      <h3 class="text-2xl">Betreft het nieuwbouw of een renovatie woning?</h3>
-                     <div class="flex-1 flex mt-6 gap-2">
+                     <div class="flex-1 flex mt-6 gap-2 items-start">
                         <label 
                            for="nieuwbouw"
                         >
