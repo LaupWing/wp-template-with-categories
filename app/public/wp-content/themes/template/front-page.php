@@ -28,40 +28,42 @@
                      <h3 class="text-2xl">Betreft het nieuwbouw of een renovatie woning?</h3>
                      <div class="flex-1 flex mt-6 gap-2">
                         <label 
-                           class="w-48 h-48 bg-accent-1/10 border-[4px] border-accent-1 flex flex-col items-center justify-center"
                            for="nieuwbouw"
                         >
-                           <img 
-                              src="<?php echo get_theme_file_uri("/images/placeholder_image.png") ?>" 
-                              alt="Nieuwbouw"
-                              class="w-full"
-                           >
-                           <p class="text-lg">Nieuwbouw</p>
                            <input 
                               type="radio" 
                               name="soort" 
                               id="nieuwbouw"
-                              class="hidden"
+                              class="hidden peer"
                               value="nieuwbouw"
                            >
+                           <div class="cursor-pointer w-48 h-48 peer-checked:bg-accent-1/10 bg-gray-100 border-[4px] border-gray-200 peer-checked:border-accent-1 flex flex-col items-center justify-center opacity-50 peer-checked:opacity-100">
+                              <img 
+                                 src="<?php echo get_theme_file_uri("/images/placeholder_image.png") ?>" 
+                                 alt="Nieuwbouw"
+                                 class="w-full"
+                              >
+                              <p class="text-lg">Nieuwbouw</p>
+                           </div>
                         </label>
-                        <label 
-                           class="w-48 h-48 bg-gray-100 border-[4px] border-gray-200 flex flex-col items-center justify-center opacity-50"
+                        <label
                            for="renovatie"
                         >
-                           <img 
-                              src="<?php echo get_theme_file_uri("/images/placeholder_image.png") ?>" 
-                              alt="Nieuwbouw"
-                              class="w-full"
-                           >
-                           <p class="text-lg">Renovatie</p>
                            <input 
                               type="radio" 
                               name="soort" 
                               id="renovatie"
-                              class="hidden"
+                              class="hidden peer"
                               value="renovatie"
                            >
+                           <div class="cursor-pointer w-48 h-48 peer-checked:bg-accent-1/10 bg-gray-100 border-[4px] border-gray-200 peer-checked:border-accent-1 flex flex-col items-center justify-center opacity-50 peer-checked:opacity-100">
+                              <img 
+                                 src="<?php echo get_theme_file_uri("/images/placeholder_image.png") ?>" 
+                                 alt="Renovatie"
+                                 class="w-full"
+                              >
+                              <p class="text-lg">Renovatie</p>
+                           </div>
                         </label>
                      </div>
                   </div>
