@@ -17,6 +17,14 @@ const FormSteps = () => {
    })
    // Object.values(formData).filter(x => x).length
    const [currentStep, setCurrentStep] = useState(0)
+
+   const update = (e) => {
+      setFormData(prev => ({
+         ...prev,
+         ...e
+      }))
+   }
+   console.log(formData)
    
    return (
       <section className="flex-1 flex flex-col bg-main my-10 rounded shadow p-10">
@@ -39,7 +47,7 @@ const FormSteps = () => {
             action=""
             className="p-4 pt-6 flex-1 flex flex-col"
          >
-            {currentStep === 0 && <Step1 />}
+            {currentStep === 0 && <Step1 update={update} />}
             {currentStep === 1 && <Step2 />}
             {currentStep === 2 && <Step3 />}
             {currentStep === 3 && <Step4 />}

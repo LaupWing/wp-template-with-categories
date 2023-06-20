@@ -1,6 +1,7 @@
 export default ({
    value,
-   name
+   name,
+   onChange
 }) => {
    return (
       <label 
@@ -12,6 +13,7 @@ export default ({
             id={value}
             className="hidden peer"
             value={value}
+            onChange={onChange}
          />
          <div className="cursor-pointer w-48 h-48 peer-checked:bg-accent-1/10 bg-gray-100 border-[4px] border-gray-200 peer-checked:border-accent-1 flex flex-col items-center justify-center opacity-50 peer-checked:opacity-100">
             <img 

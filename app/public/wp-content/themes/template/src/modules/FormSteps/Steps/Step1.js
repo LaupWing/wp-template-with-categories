@@ -1,6 +1,8 @@
 import RadioImage from "../RadioImage"
 
-export default () => {
+export default ({
+   update
+}) => {
    return (
       <div className="flex flex-1">
          <div className="flex-1 flex items-center flex-col w-full sm:w-3/5">
@@ -9,10 +11,16 @@ export default () => {
                <RadioImage
                   name={"soort"}
                   value={"nieuwbouw"}
+                  onChange={() => update({
+                     soort: "nieuwbouw"
+                  })}
                />
                <RadioImage 
                   name={"soort"}
                   value={"renovatie"}
+                  onChange={() => update({
+                     soort: "renovatie"
+                  })}
                />
             </div>
          </div>
