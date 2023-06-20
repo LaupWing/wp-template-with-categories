@@ -19,8 +19,13 @@
                <div class="h-2 bg-gray-300 flex-1"></div>
                <div class="h-2 bg-gray-300 flex-1"></div>
             </div>
-            <form action="">
-               
+            <form 
+               action=""
+               class="p-4 flex-1 flex"
+            >
+               <div class="flex-1">
+
+               </div>
             </form>
          </section>
       </div>
