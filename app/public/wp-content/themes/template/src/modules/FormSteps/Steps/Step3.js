@@ -1,3 +1,4 @@
+import Radio from "../Radio"
 import RadioImage from "../RadioImage"
 
 export default () => {
@@ -16,19 +17,16 @@ export default () => {
                      value={"tweekapper"}
                   />
                </div>
-               <div className="flex flex-col my-4 text-lg">
-                  <p className="font-semibold">Schikt uw woning over een uitbouw?</p>
-                  <div className="flex gap-4 mt-1">
-                     <div className="flex gap-2 items-center text-2">
-                        <input type="radio" name="uitbouw" id="uitbouw_yes" />
-                        <label htmlFor="uitbouw_yes">Ja</label>
-                     </div>
-                     <div className="flex gap-2 items-center text-2">
-                        <input type="radio" name="uitbouw" id="uitbouw_no" />
-                        <label htmlFor="uitbouw_no">Nee</label>
-                     </div>
-                  </div>
-               </div>
+               <Radio 
+                  label={"Schikt uw woning over een uitbouw?"}
+                  name={"uitbouw"}
+                  values={["ja", "nee"]}
+               />
+               <Radio 
+                  label={"Beschikt uw woning over een inpandige garage?"}
+                  name={"inpandige_garage"}
+                  values={["ja", "nee"]}
+               />
             </div>
          </div>
       </div>

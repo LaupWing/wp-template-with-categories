@@ -2,6 +2,55 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/modules/FormSteps/Radio.js":
+/*!****************************************!*\
+  !*** ./src/modules/FormSteps/Radio.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (({
+  name,
+  values,
+  label
+}) => {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flex flex-col my-4 text-lg"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "font-semibold"
+  }, label), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flex gap-4 mt-1"
+  }, values.map(value => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Option, {
+    value: value,
+    name: name
+  }))));
+});
+const Option = ({
+  value,
+  name
+}) => {
+  const id = `${name}_${value}`;
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flex gap-2 items-center text-2"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+    type: "radio",
+    name: name,
+    id: id,
+    value: value
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
+    htmlFor: id,
+    className: "capitalize"
+  }, value));
+};
+
+/***/ }),
+
 /***/ "./src/modules/FormSteps/RadioImage.js":
 /*!*********************************************!*\
   !*** ./src/modules/FormSteps/RadioImage.js ***!
@@ -134,7 +183,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _RadioImage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../RadioImage */ "./src/modules/FormSteps/RadioImage.js");
+/* harmony import */ var _Radio__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Radio */ "./src/modules/FormSteps/Radio.js");
+/* harmony import */ var _RadioImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../RadioImage */ "./src/modules/FormSteps/RadioImage.js");
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
@@ -148,35 +199,21 @@ __webpack_require__.r(__webpack_exports__);
     className: "mt-6 flex flex-col"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "grid gap-2 grid-cols-2"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
     name: "plafonds",
     value: "tussenwoning"
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
     name: "plafonds",
     value: "tweekapper"
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "flex flex-col my-4 text-lg"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    className: "font-semibold"
-  }, "Schikt uw woning over een uitbouw?"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "flex gap-4 mt-1"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "flex gap-2 items-center text-2"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
-    type: "radio",
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Radio__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    label: "Schikt uw woning over een uitbouw?",
     name: "uitbouw",
-    id: "uitbouw_yes"
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
-    htmlFor: "uitbouw_yes"
-  }, "Ja")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "flex gap-2 items-center text-2"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
-    type: "radio",
-    name: "uitbouw",
-    id: "uitbouw_no"
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
-    htmlFor: "uitbouw_no"
-  }, "Nee")))))));
+    values: ["ja", "nee"]
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Radio__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    label: "Beschikt uw woning over een inpandige garage?",
+    name: "inpandige_garage",
+    values: ["ja", "nee"]
+  }))));
 });
 
 /***/ }),
