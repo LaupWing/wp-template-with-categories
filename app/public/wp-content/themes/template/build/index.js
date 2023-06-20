@@ -381,6 +381,17 @@ __webpack_require__.r(__webpack_exports__);
     label: "Achternaam *",
     name: "email",
     value: ""
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Text__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    label: "Opmerkingen/bijzonderheden?",
+    name: "email",
+    value: "",
+    className: "col-span-2"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Text__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    label: "Wat is de prognose opleverdatum? *",
+    name: "email",
+    type: "date",
+    value: "",
+    className: "col-span-2"
   }))));
 });
 

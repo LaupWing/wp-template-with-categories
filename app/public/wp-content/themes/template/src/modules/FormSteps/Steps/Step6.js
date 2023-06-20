@@ -27,6 +27,19 @@ export default () => {
                   name={"email"}
                   value={""}
                />
+               <Text
+                  label={"Opmerkingen/bijzonderheden?"}
+                  name={"email"}
+                  value={""}
+                  className="col-span-2"
+               />
+               <Text
+                  label={"Wat is de prognose opleverdatum? *"}
+                  name={"email"}
+                  type="date"
+                  value={""}
+                  className="col-span-2"
+               />
             </div>
          </div>
       </div>
