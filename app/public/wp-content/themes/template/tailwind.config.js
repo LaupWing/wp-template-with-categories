@@ -7,7 +7,8 @@ module.exports = {
    safelist: [
       "menu",
       "menu-item",
-      "sub-menu"
+      "sub-menu",
+      "current-menu-item"
    ],
    theme: {
       extend: {

@@ -32,6 +32,10 @@
       @apply flex gap-4;
    }
 
+   .current-menu-item {
+      @apply font-bold;
+   }
+
    .menu .menu-item,  
    .menu .menu-item .sub-menu .menu-item{
       @apply relative px-2;
