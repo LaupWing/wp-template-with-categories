@@ -19,6 +19,7 @@
                <div class="h-2 bg-gray-300 flex-1"></div>
                <div class="h-2 bg-gray-300 flex-1"></div>
             </div>
+            <div id="form-steps"></div>
             <form 
                action=""
                class="p-4 pt-6 flex-1 flex flex-col"
