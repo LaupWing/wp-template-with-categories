@@ -2,7 +2,7 @@
 
 function loadAssets(){
    wp_enqueue_style("mainStyle", get_theme_file_uri("/build/index.css"));
-   wp_enqueue_script("mainScript", get_theme_file_uri("build/index.js"), array("jquery"), "1.0", true);
+   wp_enqueue_script("mainScript", get_theme_file_uri("build/index.js"), array("wp-element"), "1.0", true);
 }
 
 add_action("wp_enqueue_scripts", "loadAssets");
