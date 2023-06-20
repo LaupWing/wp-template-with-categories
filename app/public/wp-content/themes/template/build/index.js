@@ -105,7 +105,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (({
   value,
   name,
-  onChange
+  onChange,
+  checked
 }) => {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
     for: value
@@ -115,7 +116,8 @@ __webpack_require__.r(__webpack_exports__);
     id: value,
     className: "hidden peer",
     value: value,
-    onChange: onChange
+    onChange: onChange,
+    checked: checked
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "cursor-pointer w-48 h-48 peer-checked:bg-accent-1/10 bg-gray-100 border-[4px] border-gray-200 peer-checked:border-accent-1 flex flex-col items-center justify-center opacity-50 peer-checked:opacity-100"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
@@ -145,7 +147,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (({
-  update
+  update,
+  formData
 }) => {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-1"
@@ -160,13 +163,15 @@ __webpack_require__.r(__webpack_exports__);
     value: "nieuwbouw",
     onChange: () => update({
       soort: "nieuwbouw"
-    })
+    }),
+    checked: formData.soort === "nieuwbouw"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
     name: "soort",
     value: "renovatie",
     onChange: () => update({
       soort: "renovatie"
-    })
+    }),
+    checked: formData.soort === "renovatie"
   }))));
 });
 
@@ -528,8 +533,10 @@ const FormSteps = () => {
     action: "",
     className: "p-4 pt-6 flex-1 flex flex-col"
   }, currentStep === 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Steps_Step1__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    formData: formData,
     update: update
   }), currentStep === 1 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Steps_Step2__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    formData: formData,
     update: update
   }), currentStep === 2 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Steps_Step3__WEBPACK_IMPORTED_MODULE_3__["default"], null), currentStep === 3 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Steps_Step4__WEBPACK_IMPORTED_MODULE_4__["default"], null), currentStep === 4 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Steps_Step5__WEBPACK_IMPORTED_MODULE_5__["default"], null), currentStep === 5 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Steps_Step6__WEBPACK_IMPORTED_MODULE_6__["default"], null), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "mt-auto mx-auto flex gap-2"

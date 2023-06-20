@@ -1,7 +1,8 @@
 import RadioImage from "../RadioImage"
 
 export default ({
-   update
+   update,
+   formData
 }) => {
    return (
       <div className="flex flex-1">
@@ -14,6 +15,7 @@ export default ({
                   onChange={() => update({
                      soort: "nieuwbouw"
                   })}
+                  checked={formData.soort === "nieuwbouw"}
                />
                <RadioImage 
                   name={"soort"}
@@ -21,6 +23,7 @@ export default ({
                   onChange={() => update({
                      soort: "renovatie"
                   })}
+                  checked={formData.soort === "renovatie"}
                />
             </div>
          </div>

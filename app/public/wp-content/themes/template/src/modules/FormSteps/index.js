@@ -47,8 +47,8 @@ const FormSteps = () => {
             action=""
             className="p-4 pt-6 flex-1 flex flex-col"
          >
-            {currentStep === 0 && <Step1 update={update} />}
-            {currentStep === 1 && <Step2  update={update} />}
+            {currentStep === 0 && <Step1 formData={formData} update={update} />}
+            {currentStep === 1 && <Step2 formData={formData} update={update} />}
             {currentStep === 2 && <Step3 />}
             {currentStep === 3 && <Step4 />}
             {currentStep === 4 && <Step5 />}
