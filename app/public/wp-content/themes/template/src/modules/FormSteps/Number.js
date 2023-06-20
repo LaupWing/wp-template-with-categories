@@ -5,7 +5,7 @@ export default ({
    unit
 }) => {
    return (
-      <div className="flex flex-col my-4 text-lg items-start">
+      <div className="flex flex-col text-lg items-start">
          <p className="font-semibold">{label}</p>
          <div className="mt-1 w-32 relative">
             <input 

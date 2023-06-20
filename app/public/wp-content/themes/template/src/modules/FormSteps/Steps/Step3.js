@@ -6,7 +6,7 @@ export default () => {
       <div className="flex flex-1">
          <div className="flex-1 flex items-center flex-col">
             <h3 className="text-2xl">Gaat het alleen om wanden? Of ook plafonds?</h3>
-            <div className="mt-6 flex flex-col">
+            <div className="mt-6 flex flex-col gap-6">
                <div className="grid gap-2 grid-cols-2">
                   <RadioImage
                      name={"plafonds"}

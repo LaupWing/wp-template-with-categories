@@ -5,7 +5,7 @@ export default () => {
    return (
       <div className="flex flex-1">
          <div className="flex-1 flex items-center flex-col">
-            <div className="mt-6 flex flex-col">
+            <div className="mt-6 flex flex-col gap-6">
                <Number
                   label={"Hoeveel m2 woonoppervlak heeft uw woning? *"}
                   value={""}

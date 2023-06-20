@@ -4,7 +4,7 @@ export default ({
    label
 }) => {
    return (
-      <div className="flex flex-col my-4 text-lg">
+      <div className="flex flex-col text-lg">
          <p className="font-semibold">{label}</p>
          <div className="flex gap-4 mt-1">
             {values.map(value => (
