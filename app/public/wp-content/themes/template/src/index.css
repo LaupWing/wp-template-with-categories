@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 :root {
+   --color-main: 255 255 255;
+   --color-accent1: 0 115 103;
+   --color-accent2: 30 34 170;
    --height-nav: 3rem;
    --screen-height: 100vh;
    --screen-height-dynamic: 100vh;
