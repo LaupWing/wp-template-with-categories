@@ -2,7 +2,7 @@
 module.exports = {
    content: [
       "./**/*.php",
-      "./src/**/*.jsx"
+      "./src/**/*.{jsx,js}"
    ],
    safelist: [
       "menu",

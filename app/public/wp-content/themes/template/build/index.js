@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/modules/FormSteps.js":
-/*!**********************************!*\
-  !*** ./src/modules/FormSteps.js ***!
-  \**********************************/
+/***/ "./src/modules/FormSteps/index.js":
+/*!****************************************!*\
+  !*** ./src/modules/FormSteps/index.js ***!
+  \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -17,7 +17,78 @@ const {
   useState
 } = wp.element;
 const FormSteps = () => {
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, "Test");
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
+    className: "flex-1 flex flex-col bg-main my-10 rounded shadow p-10"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mb-4"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
+    className: "text-3xl"
+  }, "Binnen 1 minuut uw project berekenen?")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flex w-full gap-2"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "h-2 bg-accent-1 flex-1"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "h-2 bg-gray-300 flex-1"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "h-2 bg-gray-300 flex-1"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "h-2 bg-gray-300 flex-1"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "h-2 bg-gray-300 flex-1"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "h-2 bg-gray-300 flex-1"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "h-2 bg-gray-300 flex-1"
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("form", {
+    action: "",
+    className: "p-4 pt-6 flex-1 flex flex-col"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flex flex-1"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flex-1 flex items-center flex-col"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
+    className: "text-2xl"
+  }, "Betreft het nieuwbouw of een renovatie woning?"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flex-1 flex mt-6 gap-2 items-start"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
+    for: "nieuwbouw"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+    type: "radio",
+    name: "soort",
+    id: "nieuwbouw",
+    className: "hidden peer",
+    value: "nieuwbouw"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "cursor-pointer w-48 h-48 peer-checked:bg-accent-1/10 bg-gray-100 border-[4px] border-gray-200 peer-checked:border-accent-1 flex flex-col items-center justify-center opacity-50 peer-checked:opacity-100"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    src: "http://template-with-categories.local/wp-content/themes/template/images/placeholder_image.png",
+    alt: "Nieuwbouw",
+    className: "w-full"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "text-lg"
+  }, "Nieuwbouw"))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
+    for: "renovatie"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+    type: "radio",
+    name: "soort",
+    id: "renovatie",
+    className: "hidden peer",
+    value: "renovatie"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "cursor-pointer w-48 h-48 peer-checked:bg-accent-1/10 bg-gray-100 border-[4px] border-gray-200 peer-checked:border-accent-1 flex flex-col items-center justify-center opacity-50 peer-checked:opacity-100"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    src: "http://template-with-categories.local/wp-content/themes/template/images/placeholder_image.png",
+    alt: "Renovatie",
+    className: "w-full"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "text-lg"
+  }, "Renovatie")))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "mt-auto mx-auto flex gap-2"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
+    className: "w-24 py-1 ml-4 font-bold rounded border-2 text-accent-2 border-accent-2"
+  }, "Vorige"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
+    className: "w-24 py-1 ml-4 font-bold rounded bg-accent-2 text-main"
+  }, "Volgende"))));
 };
 render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(FormSteps, null), document.getElementById("form-steps"));
 
@@ -108,7 +179,7 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_FormSteps__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/FormSteps */ "./src/modules/FormSteps.js");
+/* harmony import */ var _modules_FormSteps__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/FormSteps */ "./src/modules/FormSteps/index.js");
 
 })();
 
