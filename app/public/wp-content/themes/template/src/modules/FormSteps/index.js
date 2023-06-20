@@ -1,6 +1,7 @@
 const {render, useState} = wp.element
 import RadioImage from "./RadioImage"
 import Step1 from "./Steps/Step1"
+import Step2 from "./Steps/Step2"
 
 const FormSteps = () => {
    const [formData, setFormData] = useState({
@@ -11,7 +12,8 @@ const FormSteps = () => {
       details: null,
       gebruiker: null
    })
-   const [currentStep, setCurrentStep] = useState(Object.values(formData).filter(x => x).length)
+   // Object.values(formData).filter(x => x).length
+   const [currentStep, setCurrentStep] = useState(1)
    
    return (
       <section className="flex-1 flex flex-col bg-main my-10 rounded shadow p-10">
@@ -30,11 +32,14 @@ const FormSteps = () => {
             className="p-4 pt-6 flex-1 flex flex-col"
          >
             {currentStep === 0 && <Step1 />}
+            {currentStep === 1 && <Step2 />}
             <div className="mt-auto mx-auto flex gap-2">
                <button className="w-24 py-1 ml-4 font-bold rounded border-2 text-accent-2 border-accent-2">
                   Vorige
                </button>
-               <button className="w-24 py-1 ml-4 font-bold rounded bg-accent-2 text-main">
+               <button 
+                  className="w-24 py-1 ml-4 font-bold rounded bg-accent-2 text-main"
+               >
                   Volgende
                </button>
             </div>
