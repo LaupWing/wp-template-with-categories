@@ -46,11 +46,20 @@ const FormSteps = () => {
             {currentStep === 4 && <Step5 />}
             {currentStep === 5 && <Step6 />}
             <div className="mt-auto mx-auto flex gap-2">
-               <button className="w-24 py-1 ml-4 font-bold rounded border-2 text-accent-2 border-accent-2">
+               <button 
+                  type="button"
+                  className={currentStep === 0 ? 
+                     "w-24 py-1 ml-4 font-bold rounded border-2 bg-gray-200 text-gray-300 border-gray-300 pointer-events-none" : 
+                     "w-24 py-1 ml-4 font-bold rounded border-2 text-accent-2 border-accent-2"
+                  }
+                  onClick={() => setCurrentStep(prev => prev - 1)}
+               >
                   Vorige
                </button>
                <button 
-                  className="w-24 py-1 ml-4 font-bold rounded bg-accent-2 text-main"
+                  type="button"
+                  className={"w-24 py-1 ml-4 font-bold rounded bg-accent-2 text-main"}
+                  onClick={() => setCurrentStep(prev => prev + 1)}
                >
                   Volgende
                </button>
