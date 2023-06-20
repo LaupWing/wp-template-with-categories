@@ -4,7 +4,7 @@ export default ({
    update,
    formData
 }) => {
-   const choices = [
+   const types = [
       {
          name: "type",
          value: "tussenwoning"
@@ -36,14 +36,14 @@ export default ({
          <div className="flex-1 flex items-center flex-col w-full sm:w-3/5">
             <h3 className="text-2xl">Betreft het nieuwbouw of een renovatie woning?</h3>
             <div className="grid mt-6 gap-2 grid-cols-3">
-               {choices.map(choice => (
+               {types.map(type => (
                   <RadioImage
-                     name={choice.name}
-                     value={choice.value}
+                     name={type.name}
+                     value={type.value}
                      onChange={() => update({
-                        [choice.name]: choice.value
+                        [type.name]: type.value
                      })}
-                     checked={formData[choice.name] === choice.value}
+                     checked={formData[type.name] === type.value}
                   />
                ))}
             </div>

@@ -2,6 +2,10 @@ import Radio from "../Radio"
 import RadioImage from "../RadioImage"
 
 export default () => {
+   const plafonds = [
+      
+   ]
+
    return (
       <div className="flex flex-1">
          <div className="flex-1 flex items-center flex-col w-full sm:w-3/5">

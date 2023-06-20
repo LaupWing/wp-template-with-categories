@@ -150,7 +150,7 @@ __webpack_require__.r(__webpack_exports__);
   update,
   formData
 }) => {
-  const choices = [{
+  const soorten = [{
     name: "soort",
     value: "nieuwbouw"
   }, {
@@ -165,13 +165,13 @@ __webpack_require__.r(__webpack_exports__);
     className: "text-2xl"
   }, "Betreft het nieuwbouw of een renovatie woning?"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex-1 flex mt-6 gap-2 items-start"
-  }, choices.map(choice => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    name: choice.name,
-    value: choice.value,
+  }, soorten.map(soort => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    name: soort.name,
+    value: soort.value,
     onChange: () => update({
-      [choice.name]: choice.value
+      [soort.name]: soort.value
     }),
-    checked: formData[choice.name] === choice.value
+    checked: formData[soort.name] === soort.value
   })))));
 });
 
@@ -196,7 +196,7 @@ __webpack_require__.r(__webpack_exports__);
   update,
   formData
 }) => {
-  const choices = [{
+  const types = [{
     name: "type",
     value: "tussenwoning"
   }, {
@@ -223,13 +223,13 @@ __webpack_require__.r(__webpack_exports__);
     className: "text-2xl"
   }, "Betreft het nieuwbouw of een renovatie woning?"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "grid mt-6 gap-2 grid-cols-3"
-  }, choices.map(choice => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    name: choice.name,
-    value: choice.value,
+  }, types.map(type => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    name: type.name,
+    value: type.value,
     onChange: () => update({
-      [choice.name]: choice.value
+      [type.name]: type.value
     }),
-    checked: formData[choice.name] === choice.value
+    checked: formData[type.name] === type.value
   })))));
 });
 
@@ -253,6 +253,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+  const plafonds = [];
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-1"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
