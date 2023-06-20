@@ -11,7 +11,7 @@ export default ({
          <input 
             type={type} 
             {...props}
-            className="bg-gray-100 rounded placeholder-gray-900 w-full"
+            className="bg-gray-100 py-1 rounded placeholder-gray-900 w-full border-gray-200"
             name={name} 
             id={name} 
             value={value}
