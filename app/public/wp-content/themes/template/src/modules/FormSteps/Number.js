@@ -2,7 +2,8 @@ export default ({
    name,
    value,
    label,
-   unit
+   unit,
+   onChange
 }) => {
    return (
       <div className="flex flex-col text-lg items-start">
@@ -14,6 +15,7 @@ export default ({
                name={name} 
                id={name} 
                value={value}
+               onChange={onChange}
             />
             <span className="pointer-events-none text-base absolute inset-y-0 right-0 flex items-center pr-3">
                {unit}

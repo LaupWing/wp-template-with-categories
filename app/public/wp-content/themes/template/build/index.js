@@ -19,7 +19,8 @@ __webpack_require__.r(__webpack_exports__);
   name,
   value,
   label,
-  unit
+  unit,
+  onChange
 }) => {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-col text-lg items-start"
@@ -32,7 +33,8 @@ __webpack_require__.r(__webpack_exports__);
     className: "block bg-gray-100 rounded py-2 px-4 pr-12 placeholder-gray-900 border-0 w-full text-right ring-0",
     name: name,
     id: name,
-    value: value
+    value: value,
+    onChange: onChange
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     className: "pointer-events-none text-base absolute inset-y-0 right-0 flex items-center pr-3"
   }, unit)));
@@ -395,7 +397,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (({
+  formData,
+  update
+}) => {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-1"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -404,21 +409,55 @@ __webpack_require__.r(__webpack_exports__);
     className: "mt-6 flex flex-col gap-6 w-full sm:w-3/5"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Number__WEBPACK_IMPORTED_MODULE_1__["default"], {
     label: "Hoeveel m2 woonoppervlak heeft uw woning? *",
-    value: "",
+    value: formData.step5?.woonoppervlak || "",
+    onChange: e => {
+      update({
+        step5: {
+          ...formData.step5,
+          woonoppervlak: e.target.value
+        }
+      });
+    },
     name: "woonoppervlak",
     unit: "m2"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Number__WEBPACK_IMPORTED_MODULE_1__["default"], {
     label: "Wat is uw plafondhoogte? *",
-    value: 250,
+    value: formData.step5?.plafondhoogte || 250,
     name: "plafondhoogte",
+    onChange: e => {
+      update({
+        step5: {
+          ...formData.step5,
+          plafondhoogte: e.target.value
+        }
+      });
+    },
     unit: "cm"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Radio__WEBPACK_IMPORTED_MODULE_2__["default"], {
     label: "Hoeveel verdiepingen heeft uw woning? *",
     name: "verdiepingen",
+    onChange: e => {
+      update({
+        step5: {
+          ...formData.step5,
+          verdiepingen: e.target.value
+        }
+      });
+    },
+    checked: formData.step5?.verdiepingen,
     values: ["1", "2", "3", "4"]
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Radio__WEBPACK_IMPORTED_MODULE_2__["default"], {
     label: "Heeft uw bovenste verdieping binnenwanden? *",
     name: "bovenste_verdieping_binnenwanden",
+    onChange: e => {
+      update({
+        step5: {
+          ...formData.step5,
+          bovenste_verdieping_binnenwanden: e.target.value
+        }
+      });
+    },
+    checked: formData.step5?.bovenste_verdieping_binnenwanden,
     values: ["ja", "nee"]
   }))));
 });
