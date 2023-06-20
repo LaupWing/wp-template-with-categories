@@ -57,7 +57,8 @@ __webpack_require__.r(__webpack_exports__);
   name,
   values,
   label,
-  onChange
+  onChange,
+  checked
 }) => {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-col text-lg"
@@ -68,13 +69,15 @@ __webpack_require__.r(__webpack_exports__);
   }, values.map(value => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Option, {
     value: value,
     name: name,
-    onChange: onChange
+    onChange: onChange,
+    checked: checked
   }))));
 });
 const Option = ({
   value,
   name,
-  onChange
+  onChange,
+  checked
 }) => {
   const id = `${name}_${value}`;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -84,7 +87,8 @@ const Option = ({
     name: name,
     id: id,
     value: value,
-    onChange: onChange
+    onChange: onChange,
+    checked: checked === value
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
     htmlFor: id,
     className: "capitalize"
@@ -303,10 +307,20 @@ __webpack_require__.r(__webpack_exports__);
           "uitbouw": e.target.value
         }
       });
-    }
+    },
+    checked: formData.step3?.uitbouw
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Radio__WEBPACK_IMPORTED_MODULE_1__["default"], {
     label: "Beschikt uw woning over een inpandige garage?",
     name: "inpandige_garage",
+    onChange: e => {
+      update({
+        step3: {
+          ...formData.step3,
+          "inpandige_garage": e.target.value
+        }
+      });
+    },
+    checked: formData.step3?.inpandige_garage,
     values: ["ja", "nee"]
   }))));
 });

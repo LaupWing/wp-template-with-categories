@@ -2,7 +2,8 @@ export default ({
    name,
    values,
    label,
-   onChange
+   onChange,
+   checked
 }) => {
    return (
       <div className="flex flex-col text-lg">
@@ -13,6 +14,7 @@ export default ({
                   value={value}
                   name={name}
                   onChange={onChange}
+                  checked={checked}
                />
             ))}
          </div>
@@ -23,7 +25,8 @@ export default ({
 const Option = ({
    value,
    name,
-   onChange
+   onChange,
+   checked
 }) => {
    const id = `${name}_${value}` 
    return (
@@ -34,6 +37,7 @@ const Option = ({
             id={id} 
             value={value}
             onChange={onChange}
+            checked={checked === value}
          />
          <label 
             htmlFor={id}

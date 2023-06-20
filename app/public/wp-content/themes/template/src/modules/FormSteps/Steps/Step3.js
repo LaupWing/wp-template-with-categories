@@ -48,10 +48,20 @@ export default ({
                         }
                      })
                   }}
+                  checked={formData.step3?.uitbouw}
                />
                <Radio 
                   label={"Beschikt uw woning over een inpandige garage?"}
                   name={"inpandige_garage"}
+                  onChange={(e) => {
+                     update({
+                        step3: {
+                           ...formData.step3,
+                           "inpandige_garage": e.target.value
+                        }
+                     })
+                  }}
+                  checked={formData.step3?.inpandige_garage}
                   values={["ja", "nee"]}
                />
             </div>
