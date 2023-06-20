@@ -23,32 +23,34 @@
                action=""
                class="p-4 pt-6 flex-1 flex flex-col"
             >
-               <div class="flex-1 flex items-center flex-col">
-                  <h3 class="text-2xl">Betreft het nieuwbouw of een renovatie woning?</h3>
-                  <div class="flex-1 flex mt-6 gap-2">
-                     <div class="w-48 h-48 bg-accent-1/10 border-[4px] border-accent-1 flex flex-col items-center justify-center">
-                        <img 
-                           src="<?php echo get_theme_file_uri("/images/placeholder_image.png") ?>" 
-                           alt="Nieuwbouw"
-                           class="w-full"
-                        >
-                        <p class="text-lg">Nieuwbouw</p>
-                     </div>
-                     <div class="w-48 h-48 bg-gray-100 border-[4px] border-gray-200 flex flex-col items-center justify-center opacity-50">
-                        <img 
-                           src="<?php echo get_theme_file_uri("/images/placeholder_image.png") ?>" 
-                           alt="Nieuwbouw"
-                           class="w-full"
-                        >
-                        <p class="text-lg">Nieuwbouw</p>
+               <div class="flex flex-1">
+                  <div class="flex-1 flex items-center flex-col">
+                     <h3 class="text-2xl">Betreft het nieuwbouw of een renovatie woning?</h3>
+                     <div class="flex-1 flex mt-6 gap-2">
+                        <div class="w-48 h-48 bg-accent-1/10 border-[4px] border-accent-1 flex flex-col items-center justify-center">
+                           <img 
+                              src="<?php echo get_theme_file_uri("/images/placeholder_image.png") ?>" 
+                              alt="Nieuwbouw"
+                              class="w-full"
+                           >
+                           <p class="text-lg">Nieuwbouw</p>
+                        </div>
+                        <div class="w-48 h-48 bg-gray-100 border-[4px] border-gray-200 flex flex-col items-center justify-center opacity-50">
+                           <img 
+                              src="<?php echo get_theme_file_uri("/images/placeholder_image.png") ?>" 
+                              alt="Nieuwbouw"
+                              class="w-full"
+                           >
+                           <p class="text-lg">Nieuwbouw</p>
+                        </div>
                      </div>
                   </div>
                </div>
                <div class="mt-auto mx-auto flex gap-2">
-                  <button>
+                  <button class="w-24 py-1 ml-4 font-bold rounded border-2 text-accent-2 border-accent-2">
                      Vorige
                   </button>
-                  <button>
+                  <button class="w-24 py-1 ml-4 font-bold rounded bg-accent-2 text-main">
                      Volgende
                   </button>
                </div>
