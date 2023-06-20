@@ -342,7 +342,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _RadioImage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../RadioImage */ "./src/modules/FormSteps/RadioImage.js");
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (({
+  formData,
+  update
+}) => {
+  const daken = [{
+    name: "dak",
+    value: "puntdak"
+  }, {
+    name: "dak",
+    value: "plat dak"
+  }, {
+    name: "dak",
+    value: "anders"
+  }];
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-1"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -351,16 +364,16 @@ __webpack_require__.r(__webpack_exports__);
     className: "text-2xl"
   }, "Betreft het nieuwbouw of een renovatie woning?"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "grid mt-6 gap-2 grid-cols-3"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    name: "dak",
-    value: "puntdak"
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    name: "dak",
-    value: "plat dak"
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    name: "dak",
-    value: "anders"
-  }))));
+  }, daken.map(type => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    name: type.name,
+    value: type.value,
+    onChange: () => update({
+      step4: {
+        [type.name]: type.value
+      }
+    }),
+    checked: formData.step4 && formData.step4[type.name] === type.value
+  })))));
 });
 
 /***/ }),
