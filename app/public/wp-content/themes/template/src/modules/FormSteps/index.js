@@ -1,6 +1,7 @@
 const {render, useState} = wp.element
 import Step1 from "./Steps/Step1"
 import Step2 from "./Steps/Step2"
+import Step3 from "./Steps/Step3"
 
 const FormSteps = () => {
    const [formData, setFormData] = useState({
@@ -12,7 +13,7 @@ const FormSteps = () => {
       gebruiker: null
    })
    // Object.values(formData).filter(x => x).length
-   const [currentStep, setCurrentStep] = useState(1)
+   const [currentStep, setCurrentStep] = useState(2)
    
    return (
       <section className="flex-1 flex flex-col bg-main my-10 rounded shadow p-10">
@@ -32,6 +33,7 @@ const FormSteps = () => {
          >
             {currentStep === 0 && <Step1 />}
             {currentStep === 1 && <Step2 />}
+            {currentStep === 2 && <Step3 />}
             <div className="mt-auto mx-auto flex gap-2">
                <button className="w-24 py-1 ml-4 font-bold rounded border-2 text-accent-2 border-accent-2">
                   Vorige
