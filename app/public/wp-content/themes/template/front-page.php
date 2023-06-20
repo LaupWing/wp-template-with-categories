@@ -6,11 +6,19 @@
          style="background: url('<?php echo get_theme_file_uri("/images/placeholder_bg.jpg") ?>'); background-size: cover;"
          class="h-screen-minus-nav bg-main w-full flex"
       >
-         <div class="container mx-auto flex-1 flex items-center">
-            <div class="bg-orange-200 px-4 py-2 rounded">
-               <h2>Here comes the cta</h2>
+         <section class="container mx-auto flex-1 flex flex-col bg-main my-10 rounded shadow p-10">
+            <div class="mb-4">
+               <h2 class="text-2xl">Binnen 1 minuut uw project berekenen?</h2>
             </div>
-         </div>
+            <div class="flex w-full gap-2">
+               <div class="h-2 bg-accent-1 flex-1"></div>
+               <div class="h-2 bg-gray-300 flex-1"></div>
+               <div class="h-2 bg-gray-300 flex-1"></div>
+               <div class="h-2 bg-gray-300 flex-1"></div>
+               <div class="h-2 bg-gray-300 flex-1"></div>
+            </div>
+            
+         </section>
       </div>
    </main>
 <?php 
