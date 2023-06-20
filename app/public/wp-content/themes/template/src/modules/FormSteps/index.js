@@ -1,4 +1,5 @@
 const {render, useState} = wp.element
+import RadioImage from "./RadioImage"
 
 const FormSteps = () => {
    return (
@@ -23,44 +24,14 @@ const FormSteps = () => {
                <div className="flex-1 flex items-center flex-col">
                   <h3 className="text-2xl">Betreft het nieuwbouw of een renovatie woning?</h3>
                   <div className="flex-1 flex mt-6 gap-2 items-start">
-                     <label 
-                        for="nieuwbouw"
-                     >
-                        <input 
-                           type="radio" 
-                           name="soort" 
-                           id="nieuwbouw"
-                           className="hidden peer"
-                           value="nieuwbouw"
-                        />
-                        <div className="cursor-pointer w-48 h-48 peer-checked:bg-accent-1/10 bg-gray-100 border-[4px] border-gray-200 peer-checked:border-accent-1 flex flex-col items-center justify-center opacity-50 peer-checked:opacity-100">
-                           <img 
-                              src="http://template-with-categories.local/wp-content/themes/template/images/placeholder_image.png" 
-                              alt="Nieuwbouw"
-                              className="w-full"
-                           />
-                           <p className="text-lg">Nieuwbouw</p>
-                        </div>
-                     </label>
-                     <label
-                        for="renovatie"
-                     >
-                        <input 
-                           type="radio" 
-                           name="soort" 
-                           id="renovatie"
-                           className="hidden peer"
-                           value="renovatie"
-                        />
-                        <div className="cursor-pointer w-48 h-48 peer-checked:bg-accent-1/10 bg-gray-100 border-[4px] border-gray-200 peer-checked:border-accent-1 flex flex-col items-center justify-center opacity-50 peer-checked:opacity-100">
-                           <img 
-                              src="http://template-with-categories.local/wp-content/themes/template/images/placeholder_image.png" 
-                              alt="Renovatie"
-                              className="w-full"
-                           />
-                           <p className="text-lg">Renovatie</p>
-                        </div>
-                     </label>
+                     <RadioImage 
+                        name={"soort"}
+                        value={"nieuwbouw"}
+                     />
+                     <RadioImage 
+                        name={"soort"}
+                        value={"renovatie"}
+                     />
                   </div>
                </div>
             </div>
