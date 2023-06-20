@@ -193,8 +193,28 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (({
-  update
+  update,
+  formData
 }) => {
+  const choices = [{
+    name: "type",
+    value: "tussenwoning"
+  }, {
+    name: "type",
+    value: "tweekapper"
+  }, {
+    name: "type",
+    value: "hoekwoning"
+  }, {
+    name: "type",
+    value: "vrijstaand"
+  }, {
+    name: "type",
+    value: "appartement"
+  }, {
+    name: "type",
+    value: "anders"
+  }];
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-1"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -203,43 +223,14 @@ __webpack_require__.r(__webpack_exports__);
     className: "text-2xl"
   }, "Betreft het nieuwbouw of een renovatie woning?"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "grid mt-6 gap-2 grid-cols-3"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    name: "type",
+  }, choices.map(choice => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    name: choice.name,
+    value: choice.value,
     onChange: () => update({
-      type: "tussenwoning"
+      [choice.name]: choice.value
     }),
-    value: "tussenwoning"
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    name: "type",
-    value: "tweekapper",
-    onChange: () => update({
-      type: "tweekapper"
-    })
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    name: "type",
-    value: "hoekwoning",
-    onChange: () => update({
-      type: "hoekwoning"
-    })
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    name: "type",
-    value: "vrijstaand",
-    onChange: () => update({
-      type: "vrijstaand"
-    })
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    name: "type",
-    value: "appartement",
-    onChange: () => update({
-      type: "appartement"
-    })
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    name: "type",
-    value: "anders",
-    onChange: () => update({
-      type: "anders"
-    })
-  }))));
+    checked: formData[choice.name] === choice.value
+  })))));
 });
 
 /***/ }),
