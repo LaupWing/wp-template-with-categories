@@ -6,7 +6,7 @@
    <?php wp_head() ?>
 </head>
 <body <?php body_class() ?>>
-   <header class="items-center h-nav bg-accent-1 flex justify-center max-w-6xl mx-auto">
+   <header class="items-center h-nav bg-main flex justify-center max-w-6xl mx-auto">
       <div class="container flex justify-between items-center">
          <h1 class="font-bold mr-8 text-xl font-cursive">
             <img 
@@ -23,9 +23,9 @@
                   ]);
                ?>
             </nav>
-            <div class="w-[34px] h-[34px] text-white bg-black rounded-full flex items-center justify-center">
-               <?php  get_template_part("templates/icons/search")?>
-            </div>
+            <button class="px-2 py-1 ml-4 font-bold rounded bg-accent-2 text-main">
+               Direct offerte
+            </button>
          </div>
       </div>
    </header>
