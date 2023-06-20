@@ -17,6 +17,16 @@ export default () => {
                   value={""}
                   type="email"
                />
+               <Text
+                  label={"Voornaam *"}
+                  name={"email"}
+                  value={""}
+               />
+               <Text
+                  label={"Achternaam *"}
+                  name={"email"}
+                  value={""}
+               />
             </div>
          </div>
       </div>

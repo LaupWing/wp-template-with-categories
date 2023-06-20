@@ -3,10 +3,11 @@ export default ({
    value,
    label,
    type = "text",
+   className = "",
    ...props
 }) => {
    return (
-      <div className="flex flex-col text-lg items-start">
+      <div className={"flex flex-col text-lg items-start " + className}>
          <p className="font-semibold">{label}</p>
          <input 
             type={type} 
