@@ -2,6 +2,14 @@ const {render, useState} = wp.element
 import RadioImage from "./RadioImage"
 
 const FormSteps = () => {
+   const [formData, setFormData] = useState({
+      soort: null,
+      type: null,
+      plafonds: null,
+      dak: null,
+      details: null,
+      gebruiker: null
+   })
    return (
       <section className="flex-1 flex flex-col bg-main my-10 rounded shadow p-10">
          <div className="mb-4">

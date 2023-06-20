@@ -57,6 +57,14 @@ const {
 } = wp.element;
 
 const FormSteps = () => {
+  const [formData, setFormData] = useState({
+    soort: null,
+    type: null,
+    plafonds: null,
+    dak: null,
+    details: null,
+    gebruiker: null
+  });
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
     className: "flex-1 flex flex-col bg-main my-10 rounded shadow p-10"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
