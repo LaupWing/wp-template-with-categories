@@ -150,6 +150,13 @@ __webpack_require__.r(__webpack_exports__);
   update,
   formData
 }) => {
+  const choices = [{
+    name: "soort",
+    value: "nieuwbouw"
+  }, {
+    name: "soort",
+    value: "renovatie"
+  }];
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-1"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -158,21 +165,14 @@ __webpack_require__.r(__webpack_exports__);
     className: "text-2xl"
   }, "Betreft het nieuwbouw of een renovatie woning?"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex-1 flex mt-6 gap-2 items-start"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    name: "soort",
-    value: "nieuwbouw",
+  }, choices.map(choice => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    name: choice.name,
+    value: choice.value,
     onChange: () => update({
-      soort: "nieuwbouw"
+      [choice.name]: choice.value
     }),
-    checked: formData.soort === "nieuwbouw"
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    name: "soort",
-    value: "renovatie",
-    onChange: () => update({
-      soort: "renovatie"
-    }),
-    checked: formData.soort === "renovatie"
-  }))));
+    checked: formData[choice.name] === choice.value
+  })))));
 });
 
 /***/ }),
