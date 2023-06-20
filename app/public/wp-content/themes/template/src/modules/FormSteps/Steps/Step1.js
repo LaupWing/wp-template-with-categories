@@ -14,6 +14,7 @@ export default ({
          value: "renovatie"
       },
    ]
+   console.log(formData)
 
    return (
       <div className="flex flex-1">
@@ -25,9 +26,11 @@ export default ({
                      name={soort.name}
                      value={soort.value}
                      onChange={() => update({
-                        [soort.name]: soort.value
+                        step1:{
+                           [soort.name]: soort.value
+                        }
                      })}
-                     checked={formData[soort.name] === soort.value}
+                     checked={formData.step1 && formData.step1[soort.name] === soort.value}
                   />
                ))}
             </div>

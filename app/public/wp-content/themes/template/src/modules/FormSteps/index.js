@@ -8,12 +8,12 @@ import Step6 from "./Steps/Step6"
 
 const FormSteps = () => {
    const [formData, setFormData] = useState({
-      soort: null,
-      type: null,
-      plafond: null,
-      dak: null,
-      details: null,
-      gebruiker: null,
+      step1: null,
+      step2: null,
+      step3: null,
+      step4: null,
+      step5: null,
+      step6: null,
       ...(localStorage.getItem("formData") ? 
          JSON.parse(localStorage.getItem("formData")) : {}
       )

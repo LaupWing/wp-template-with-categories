@@ -157,6 +157,7 @@ __webpack_require__.r(__webpack_exports__);
     name: "soort",
     value: "renovatie"
   }];
+  console.log(formData);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-1"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -169,9 +170,11 @@ __webpack_require__.r(__webpack_exports__);
     name: soort.name,
     value: soort.value,
     onChange: () => update({
-      [soort.name]: soort.value
+      step1: {
+        [soort.name]: soort.value
+      }
     }),
-    checked: formData[soort.name] === soort.value
+    checked: formData.step1 && formData.step1[soort.name] === soort.value
   })))));
 });
 
@@ -227,9 +230,11 @@ __webpack_require__.r(__webpack_exports__);
     name: type.name,
     value: type.value,
     onChange: () => update({
-      [type.name]: type.value
+      step2: {
+        [type.name]: type.value
+      }
     }),
-    checked: formData[type.name] === type.value
+    checked: formData.step2 && formData.step2[type.name] === type.value
   })))));
 });
 
@@ -502,12 +507,12 @@ const {
 
 const FormSteps = () => {
   const [formData, setFormData] = useState({
-    soort: null,
-    type: null,
-    plafond: null,
-    dak: null,
-    details: null,
-    gebruiker: null,
+    step1: null,
+    step2: null,
+    step3: null,
+    step4: null,
+    step5: null,
+    step6: null,
     ...(localStorage.getItem("formData") ? JSON.parse(localStorage.getItem("formData")) : {})
   });
   // Object.values(formData).filter(x => x).length

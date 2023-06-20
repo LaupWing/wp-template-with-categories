@@ -41,9 +41,11 @@ export default ({
                      name={type.name}
                      value={type.value}
                      onChange={() => update({
-                        [type.name]: type.value
+                        step2: {
+                           [type.name]: type.value
+                        }
                      })}
-                     checked={formData[type.name] === type.value}
+                     checked={formData.step2 && formData.step2[type.name] === type.value}
                   />
                ))}
             </div>
