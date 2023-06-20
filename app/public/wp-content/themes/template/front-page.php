@@ -16,8 +16,12 @@
                <div class="h-2 bg-gray-300 flex-1"></div>
                <div class="h-2 bg-gray-300 flex-1"></div>
                <div class="h-2 bg-gray-300 flex-1"></div>
+               <div class="h-2 bg-gray-300 flex-1"></div>
+               <div class="h-2 bg-gray-300 flex-1"></div>
             </div>
-            
+            <form action="">
+               
+            </form>
          </section>
       </div>
    </main>
