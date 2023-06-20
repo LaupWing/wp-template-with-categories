@@ -10,7 +10,7 @@ const FormSteps = () => {
    const [formData, setFormData] = useState({
       soort: null,
       type: null,
-      plafonds: null,
+      plafond: null,
       dak: null,
       details: null,
       gebruiker: null,
@@ -55,10 +55,10 @@ const FormSteps = () => {
          >
             {currentStep === 0 && <Step1 formData={formData} update={update} />}
             {currentStep === 1 && <Step2 formData={formData} update={update} />}
-            {currentStep === 2 && <Step3 />}
-            {currentStep === 3 && <Step4 />}
-            {currentStep === 4 && <Step5 />}
-            {currentStep === 5 && <Step6 />}
+            {currentStep === 2 && <Step3 formData={formData} update={update} />}
+            {currentStep === 3 && <Step4 formData={formData} update={update} />}
+            {currentStep === 4 && <Step5 formData={formData} update={update} />}
+            {currentStep === 5 && <Step6 formData={formData} update={update} />}
             <div className="mt-auto mx-auto flex gap-2">
                <button 
                   type="button"
