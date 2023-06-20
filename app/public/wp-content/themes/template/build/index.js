@@ -195,7 +195,7 @@ __webpack_require__.r(__webpack_exports__);
     className: "flex-1 flex items-center flex-col"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
     className: "text-2xl"
-  }, "Betreft het nieuwbouw of een renovatie woning?"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, "Gaat het alleen om wanden? Of ook plafonds?"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "mt-6 flex flex-col"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "grid gap-2 grid-cols-2"
@@ -218,6 +218,46 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/modules/FormSteps/Steps/Step4.js":
+/*!**********************************************!*\
+  !*** ./src/modules/FormSteps/Steps/Step4.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Radio__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Radio */ "./src/modules/FormSteps/Radio.js");
+/* harmony import */ var _RadioImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../RadioImage */ "./src/modules/FormSteps/RadioImage.js");
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flex flex-1"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flex-1 flex items-center flex-col"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
+    className: "text-2xl"
+  }, "Betreft het nieuwbouw of een renovatie woning?"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "grid mt-6 gap-2 grid-cols-3"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    name: "dak",
+    value: "puntdak"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    name: "dak",
+    value: "plat dak"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RadioImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    name: "dak",
+    value: "anders"
+  }))));
+});
+
+/***/ }),
+
 /***/ "./src/modules/FormSteps/index.js":
 /*!****************************************!*\
   !*** ./src/modules/FormSteps/index.js ***!
@@ -230,11 +270,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Steps_Step1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Steps/Step1 */ "./src/modules/FormSteps/Steps/Step1.js");
 /* harmony import */ var _Steps_Step2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Steps/Step2 */ "./src/modules/FormSteps/Steps/Step2.js");
 /* harmony import */ var _Steps_Step3__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Steps/Step3 */ "./src/modules/FormSteps/Steps/Step3.js");
+/* harmony import */ var _Steps_Step4__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Steps/Step4 */ "./src/modules/FormSteps/Steps/Step4.js");
 
 const {
   render,
   useState
 } = wp.element;
+
 
 
 
@@ -248,7 +290,7 @@ const FormSteps = () => {
     gebruiker: null
   });
   // Object.values(formData).filter(x => x).length
-  const [currentStep, setCurrentStep] = useState(2);
+  const [currentStep, setCurrentStep] = useState(3);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
     className: "flex-1 flex flex-col bg-main my-10 rounded shadow p-10"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -262,7 +304,7 @@ const FormSteps = () => {
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("form", {
     action: "",
     className: "p-4 pt-6 flex-1 flex flex-col"
-  }, currentStep === 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Steps_Step1__WEBPACK_IMPORTED_MODULE_1__["default"], null), currentStep === 1 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Steps_Step2__WEBPACK_IMPORTED_MODULE_2__["default"], null), currentStep === 2 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Steps_Step3__WEBPACK_IMPORTED_MODULE_3__["default"], null), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, currentStep === 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Steps_Step1__WEBPACK_IMPORTED_MODULE_1__["default"], null), currentStep === 1 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Steps_Step2__WEBPACK_IMPORTED_MODULE_2__["default"], null), currentStep === 2 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Steps_Step3__WEBPACK_IMPORTED_MODULE_3__["default"], null), currentStep === 3 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Steps_Step4__WEBPACK_IMPORTED_MODULE_4__["default"], null), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "mt-auto mx-auto flex gap-2"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
     className: "w-24 py-1 ml-4 font-bold rounded border-2 text-accent-2 border-accent-2"
