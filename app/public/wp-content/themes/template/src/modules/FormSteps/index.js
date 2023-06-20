@@ -10,19 +10,25 @@ const FormSteps = () => {
       details: null,
       gebruiker: null
    })
+   const currentStep = Object.values(formData).filter(x => x).length
+   
    return (
       <section className="flex-1 flex flex-col bg-main my-10 rounded shadow p-10">
          <div className="mb-4">
             <h2 className="text-3xl">Binnen 1 minuut uw project berekenen?</h2>
          </div>
          <div className="flex w-full gap-2">
-            <div className="h-2 bg-accent-1 flex-1"></div>
+            {[...new Array(7)].map((_, i) => (
+               <div 
+                  className={`h-2 ${i <= currentStep ? "bg-accent-1" : "bg-gray-300"} flex-1`}
+               />
+            ))}
+            {/* <div className="h-2 bg-accent-1 flex-1"></div>
             <div className="h-2 bg-gray-300 flex-1"></div>
             <div className="h-2 bg-gray-300 flex-1"></div>
             <div className="h-2 bg-gray-300 flex-1"></div>
             <div className="h-2 bg-gray-300 flex-1"></div>
-            <div className="h-2 bg-gray-300 flex-1"></div>
-            <div className="h-2 bg-gray-300 flex-1"></div>
+            <div className="h-2 bg-gray-300 flex-1"></div> */}
          </div>
          <form 
             action=""

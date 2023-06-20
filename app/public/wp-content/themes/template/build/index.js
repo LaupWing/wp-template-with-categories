@@ -65,6 +65,7 @@ const FormSteps = () => {
     details: null,
     gebruiker: null
   });
+  const currentStep = Object.values(formData).filter(x => x).length;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
     className: "flex-1 flex flex-col bg-main my-10 rounded shadow p-10"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -73,21 +74,9 @@ const FormSteps = () => {
     className: "text-3xl"
   }, "Binnen 1 minuut uw project berekenen?")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex w-full gap-2"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "h-2 bg-accent-1 flex-1"
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "h-2 bg-gray-300 flex-1"
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "h-2 bg-gray-300 flex-1"
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "h-2 bg-gray-300 flex-1"
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "h-2 bg-gray-300 flex-1"
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "h-2 bg-gray-300 flex-1"
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "h-2 bg-gray-300 flex-1"
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("form", {
+  }, [...new Array(7)].map((_, i) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: `h-2 ${i <= currentStep ? "bg-accent-1" : "bg-gray-300"} flex-1`
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("form", {
     action: "",
     className: "p-4 pt-6 flex-1 flex flex-col"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
