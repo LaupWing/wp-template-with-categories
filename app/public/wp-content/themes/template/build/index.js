@@ -586,6 +586,29 @@ const {
 
 
 
+const stepsSkelet = {
+  step1: {
+    soort: null
+  },
+  step2: {
+    type: null
+  },
+  step3: {
+    plafond: null,
+    uitbouw: null,
+    inpandige_garage: null
+  },
+  step4: {
+    dak: null
+  },
+  step5: {
+    woonoppervlak: null,
+    plafondhoogte: null,
+    verdiepingen: null,
+    bovenste_verdieping_binnenwanden: null
+  },
+  step6: {}
+};
 const FormSteps = () => {
   const [formData, setFormData] = useState({
     step1: null,
@@ -607,6 +630,18 @@ const FormSteps = () => {
   useEffect(() => {
     localStorage.setItem("formData", JSON.stringify(formData));
   }, [formData]);
+  console.log("testy");
+  useEffect(() => {
+    if (localStorage.getItem("formData")) {
+      const data = JSON.parse(localStorage.getItem("formData"));
+      const index = Object.keys(data).find(key => {
+        console.log(key);
+        console.log(Object.keys(stepsSkelet[key]).every(x => data[key] && data[key][x]));
+        console.log();
+      });
+      console.log(data);
+    }
+  }, []);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
     className: "flex-1 flex flex-col bg-main my-10 rounded shadow p-10"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {

@@ -57,12 +57,15 @@ const FormSteps = () => {
    useEffect(() => {
       localStorage.setItem("formData", JSON.stringify(formData))
    }, [formData])
-
+   console.log("testy")
+   
    useEffect(() => {
       if(localStorage.getItem("formData")){
          const data = JSON.parse(localStorage.getItem("formData"))
          const index = Object.keys(data).find(key => {
-            
+            console.log(key)
+            console.log(Object.keys(stepsSkelet[key]).every(x => data[key] && data[key][x]))
+            console.log()
          })
          console.log(data)
       }
