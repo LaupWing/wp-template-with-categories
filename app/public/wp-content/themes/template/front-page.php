@@ -24,8 +24,17 @@
             </div>
          </div>
       </div>
-      <div class="h-screen-minus-nav bg-main">
-
+      <div class="h-screen-minus-nav bg-main flex">
+         <div class="container grid grid-cols-2 mx-auto pt-10">
+            <div class="col-span-1">
+               <h1 class="text-4xl">
+                  <?php the_title() ?>
+               </h1>
+            </div>
+            <div class="col-span-1 my-auto">
+               <?php the_post_thumbnail(); ?>
+            </div>
+         </div>
       </div>
    </main>
 <?php 
