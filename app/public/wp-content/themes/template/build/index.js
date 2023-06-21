@@ -493,25 +493,25 @@ __webpack_require__.r(__webpack_exports__);
     type: "email"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Text__WEBPACK_IMPORTED_MODULE_1__["default"], {
     label: "Telefoonnummer *",
-    name: "email",
+    name: "telefoonnummer",
     value: "",
     type: "email"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Text__WEBPACK_IMPORTED_MODULE_1__["default"], {
     label: "Voornaam *",
-    name: "email",
+    name: "voornaam",
     value: ""
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Text__WEBPACK_IMPORTED_MODULE_1__["default"], {
     label: "Achternaam *",
-    name: "email",
+    name: "achternaam",
     value: ""
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Text__WEBPACK_IMPORTED_MODULE_1__["default"], {
     label: "Opmerkingen/bijzonderheden?",
-    name: "email",
+    name: "opmerkingen",
     value: "",
     className: "col-span-2"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Text__WEBPACK_IMPORTED_MODULE_1__["default"], {
     label: "Wat is de prognose opleverdatum? *",
-    name: "email",
+    name: "datum",
     type: "date",
     value: "",
     className: "col-span-2"

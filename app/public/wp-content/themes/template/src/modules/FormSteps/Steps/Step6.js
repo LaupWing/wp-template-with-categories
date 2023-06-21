@@ -13,29 +13,29 @@ export default () => {
                />
                <Text
                   label={"Telefoonnummer *"}
-                  name={"email"}
+                  name={"telefoonnummer"}
                   value={""}
                   type="email"
                />
                <Text
                   label={"Voornaam *"}
-                  name={"email"}
+                  name={"voornaam"}
                   value={""}
                />
                <Text
                   label={"Achternaam *"}
-                  name={"email"}
+                  name={"achternaam"}
                   value={""}
                />
                <Text
                   label={"Opmerkingen/bijzonderheden?"}
-                  name={"email"}
+                  name={"opmerkingen"}
                   value={""}
                   className="col-span-2"
                />
                <Text
                   label={"Wat is de prognose opleverdatum? *"}
-                  name={"email"}
+                  name={"datum"}
                   type="date"
                   value={""}
                   className="col-span-2"
