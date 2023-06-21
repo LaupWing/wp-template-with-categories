@@ -28,7 +28,11 @@ const stepsSkelet = {
       bovenste_verdieping_binnenwanden: null
    },
    step6: {
-
+      email: null,
+      telefoonnummer: null,
+      achternaam: null,
+      opmerkingen: null,
+      datum: null
    },
 }
 
@@ -84,7 +88,12 @@ const FormSteps = () => {
          <div className="flex w-full gap-2">
             {[...new Array(7)].map((_, i) => (
                <div 
-                  className={`h-2 cursor-pointer ${i <= currentStep ? i === currentStep ? "bg-accent-1" : "bg-accent-1/40" : "bg-gray-300"} flex-1`}
+                  className={`h-2 cursor-pointer ${
+                     i <= currentStep 
+                        ? i === currentStep 
+                           ? "bg-accent-1" 
+                           : "bg-accent-1/40" 
+                        : "bg-gray-300"} flex-1`}
                   onClick={() => {
                      setCurrentStep(i)
                      if(Object.values(formData).filter(x => x).length >= i){

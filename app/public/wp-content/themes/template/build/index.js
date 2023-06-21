@@ -607,7 +607,13 @@ const stepsSkelet = {
     verdiepingen: null,
     bovenste_verdieping_binnenwanden: null
   },
-  step6: {}
+  step6: {
+    email: null,
+    telefoonnummer: null,
+    achternaam: null,
+    opmerkingen: null,
+    datum: null
+  }
 };
 const FormSteps = () => {
   const [formData, setFormData] = useState({
