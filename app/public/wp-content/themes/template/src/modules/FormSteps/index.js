@@ -31,6 +31,13 @@ const FormSteps = () => {
    useEffect(() => {
       localStorage.setItem("formData", JSON.stringify(formData))
    }, [formData])
+
+   useEffect(() => {
+      if(localStorage.getItem("formData")){
+         const data = JSON.parse(localStorage.getItem("formData"))
+         
+      }
+   }, [])
    
    return (
       <section className="flex-1 flex flex-col bg-main my-10 rounded shadow p-10">
