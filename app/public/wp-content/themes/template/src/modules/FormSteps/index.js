@@ -58,7 +58,7 @@ const FormSteps = () => {
       localStorage.setItem("formData", JSON.stringify(formData))
    }, [formData])
 
-   const getIndex = (data) => {
+   const getUnfinishedIndex = (data) => {
       return Object.keys(data).findIndex((key) => {
          if(!Object.keys(stepsSkelet[key]).every(x => data[key] && data[key][x])){
             return key
@@ -69,7 +69,7 @@ const FormSteps = () => {
    useEffect(() => {
       if(localStorage.getItem("formData")){
          const data = JSON.parse(localStorage.getItem("formData"))
-         const index = getIndex(data)
+         const index = getUnfinishedIndex(data)
          setCurrentStep(index)
       }
    }, [])
