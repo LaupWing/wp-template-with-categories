@@ -27,7 +27,7 @@
       <div class="h-screen-minus-nav bg-main flex">
          <div class="container grid gap-6 grid-cols-2 mx-auto pt-10">
             <div class="col-span-1">
-               <h1 class="text-3xl">
+               <h1 class="text-3xl text-accent-2 font-bold">
                   <?php the_title() ?>
                </h1>
                <div class="mt-8">
@@ -41,8 +41,8 @@
       </div>
       <div class="flex flex-col">
          <div class="container mx-auto flex flex-col">
-            <h2 class="text-3xl">Recente werk</h2>
-            <div class="mt-8 flex flex-col">
+            <h2 class="text-3xl text-accent-2 font-bold">Recente werk</h2>
+            <div class="mt-8 flex flex-col gap-y-10">
                <?php 
                   $counter = 1;
                   $homepagePosts = new WP_Query([
