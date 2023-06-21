@@ -42,7 +42,7 @@
       <div class="flex flex-col">
          <div class="container mx-auto flex flex-col">
             <h2 class="text-3xl">Recente werk</h2>
-            <div class="mt-8">
+            <div class="mt-8 flex flex-col">
                <?php 
                   $homepagePosts = new WP_Query([
                      "posts_per_page" => 3,
@@ -53,8 +53,18 @@
                   while($homepagePosts->have_posts()){
                      $homepagePosts->the_post();
                ?>
-                  <div>
-                     <?php the_title() ?>
+                  <div class="grid grid-cols-2">
+                     <div class="flex flex-col">
+                        <h2 class="text-2xl mb-2">
+                           <?php the_title() ?>
+                        </h2>
+                        <p>
+                           <?php the_content() ?>
+                        </p>
+                     </div>
+                     <div class="p-6 aspect-square">
+                        <?php the_post_thumbnail(); ?>
+                     </div>
                   </div>
                <?php 
                   } wp_reset_postdata();
