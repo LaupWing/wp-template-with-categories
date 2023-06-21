@@ -1,6 +1,8 @@
 const {render} = wp.element
 import {AiFillFacebook, AiFillInstagram, AiFillLinkedin, AiOutlineWhatsApp} from "react-icons/ai"
 
+console.log(document.getElementById("socials"))
+
 const Socials = () => {
    return (
       <div className="flex flex-col">

@@ -22,6 +22,9 @@ module.exports = {
          },
          height: {
             "screen-minus-nav": "calc(var(--screen-height, 100vh) - var(--height-nav))"
+         },
+         minHeight: {
+            "screen-minus-nav": "calc(var(--screen-height, 100vh) - var(--height-nav))"
          }
       },
    },

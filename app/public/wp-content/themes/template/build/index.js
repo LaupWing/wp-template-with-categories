@@ -716,6 +716,7 @@ const {
   render
 } = wp.element;
 
+console.log(document.getElementById("socials"));
 const Socials = () => {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-col"
