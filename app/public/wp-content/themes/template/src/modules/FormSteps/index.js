@@ -61,7 +61,10 @@ const FormSteps = () => {
    useEffect(() => {
       if(localStorage.getItem("formData")){
          const data = JSON.parse(localStorage.getItem("formData"))
-
+         const index = Object.keys(data).find(key => {
+            
+         })
+         console.log(data)
       }
    }, [])
    
