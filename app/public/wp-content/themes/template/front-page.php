@@ -30,7 +30,7 @@
                <h1 class="text-3xl">
                   <?php the_title() ?>
                </h1>
-               <div class="mt-4">
+               <div class="mt-8">
                   <?php the_content() ?>
                </div>
             </div>
@@ -42,22 +42,24 @@
       <div class="flex flex-col">
          <div class="container mx-auto flex flex-col">
             <h2 class="text-3xl">Recente werk</h2>
-            <?php 
-               $homepagePosts = new WP_Query([
-                  "posts_per_page" => 3,
-                  "orderby" => "date",
-                  "order" => "DESC"
-               ]);
+            <div class="mt-8">
+               <?php 
+                  $homepagePosts = new WP_Query([
+                     "posts_per_page" => 3,
+                     "orderby" => "date",
+                     "order" => "DESC"
+                  ]);
 
-               while($homepagePosts->have_posts()){
-                  $homepagePosts->the_post();
-            ?>
-               <div>
-                  <?php the_title() ?>
-               </div>
-            <?php 
-               } wp_reset_postdata();
-            ?>
+                  while($homepagePosts->have_posts()){
+                     $homepagePosts->the_post();
+               ?>
+                  <div>
+                     <?php the_title() ?>
+                  </div>
+               <?php 
+                  } wp_reset_postdata();
+               ?>
+            </div>
          </div>
       </div>
    </main>
