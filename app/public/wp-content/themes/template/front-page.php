@@ -44,6 +44,7 @@
             <h2 class="text-3xl">Recente werk</h2>
             <div class="mt-8 flex flex-col">
                <?php 
+                  $counter = 1;
                   $homepagePosts = new WP_Query([
                      "posts_per_page" => 3,
                      "orderby" => "date",
@@ -54,19 +55,35 @@
                      $homepagePosts->the_post();
                ?>
                   <div class="grid grid-cols-2">
-                     <div class="flex flex-col">
-                        <h2 class="text-2xl mb-2">
-                           <?php the_title() ?>
-                        </h2>
-                        <p>
-                           <?php the_content() ?>
-                        </p>
-                     </div>
-                     <div class="p-6 aspect-square">
-                        <?php the_post_thumbnail(); ?>
-                     </div>
+                     <?php if($counter%2 === 0) {?>
+                        <div class="flex flex-col my-auto">
+                           <h2 class="text-2xl mb-2">
+                              <?php the_title() ?>
+                           </h2>
+                           <p>
+                              <?php the_content() ?>
+                           </p>
+                        </div>
+                        <div class="p-6">
+                           <?php the_post_thumbnail(); ?>
+                        </div>
+                     <?php } else { ?>
+
+                        <div class="p-6">
+                           <?php the_post_thumbnail(); ?>
+                        </div>
+                        <div class="flex flex-col my-auto">
+                           <h2 class="text-2xl mb-2">
+                              <?php the_title() ?>
+                           </h2>
+                           <p>
+                              <?php the_content() ?>
+                           </p>
+                        </div>
+                     <?php } ?>
                   </div>
                <?php 
+                  $counter++;
                   } wp_reset_postdata();
                ?>
             </div>
