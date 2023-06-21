@@ -73,6 +73,8 @@ const FormSteps = () => {
          setCurrentStep(index)
       }
    }, [])
+   console.log(getUnfinishedIndex(formData))
+   console.log(formData)
    
    return (
       <section className="flex-1 flex flex-col bg-main my-10 rounded shadow p-10">
@@ -114,7 +116,11 @@ const FormSteps = () => {
                </button>
                <button 
                   type="button"
-                  className={"w-24 py-1 ml-4 font-bold rounded bg-accent-2 text-main"}
+                  className={getUnfinishedIndex(formData) <= currentStep ? 
+                     "w-24 py-1 ml-4 font-bold rounded border-2 bg-gray-200 text-gray-300 border-gray-300 pointer-events-none" : 
+                     "w-24 py-1 ml-4 font-bold rounded bg-accent-2 text-main"
+                  }
+                  // className={"w-24 py-1 ml-4 font-bold rounded bg-accent-2 text-main"}
                   onClick={() => setCurrentStep(prev => prev + 1)}
                >
                   Volgende
