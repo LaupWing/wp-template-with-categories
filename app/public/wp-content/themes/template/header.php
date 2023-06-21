@@ -6,8 +6,8 @@
    <?php wp_head() ?>
 </head>
 <body <?php body_class() ?>>
-   <header class="items-center h-nav bg-main flex justify-center max-w-6xl mx-auto sticky top-0">
-      <div class="container flex justify-between items-center">
+   <header class="items-center h-nav bg-main flex sticky top-0">
+      <div class="container flex justify-between items-center mx-auto">
          <h1 class="font-bold mr-8 text-xl font-cursive">
             <img 
                src="<?php echo get_theme_file_uri("/images/logo.png") ?>" 
