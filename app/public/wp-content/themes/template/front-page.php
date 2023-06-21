@@ -56,8 +56,8 @@
                ?>
                   <div class="grid grid-cols-2">
                      <?php if($counter%2 === 0) {?>
-                        <div class="flex flex-col my-auto">
-                           <h2 class="text-2xl mb-2">
+                        <div class="flex flex-col my-auto items-start">
+                           <h2 class="text-2xl mb-2 border-b-2 border-accent-1">
                               <?php the_title() ?>
                            </h2>
                            <p>
@@ -72,8 +72,8 @@
                         <div class="p-6">
                            <?php the_post_thumbnail(); ?>
                         </div>
-                        <div class="flex flex-col my-auto">
-                           <h2 class="text-2xl mb-2">
+                        <div class="flex flex-col my-auto items-start">
+                           <h2 class="text-2xl mb-2 border-b-2 border-accent-1">
                               <?php the_title() ?>
                            </h2>
                            <p>
