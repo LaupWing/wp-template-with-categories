@@ -6,6 +6,32 @@ import Step4 from "./Steps/Step4"
 import Step5 from "./Steps/Step5"
 import Step6 from "./Steps/Step6"
 
+const stepsSkelet = {
+   step1: {
+      soort: null
+   },
+   step2: {
+      type: null
+   },
+   step3: {
+      plafond: null,
+      uitbouw: null,
+      inpandige_garage: null
+   },
+   step4: {
+      dak: null
+   },
+   step5: {
+      woonoppervlak: null,
+      plafondhoogte: null,
+      verdiepingen: null,
+      bovenste_verdieping_binnenwanden: null
+   },
+   step6: {
+
+   },
+}
+
 const FormSteps = () => {
    const [formData, setFormData] = useState({
       step1: null,
@@ -35,7 +61,7 @@ const FormSteps = () => {
    useEffect(() => {
       if(localStorage.getItem("formData")){
          const data = JSON.parse(localStorage.getItem("formData"))
-         
+
       }
    }, [])
    
