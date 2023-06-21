@@ -44,7 +44,7 @@
             <h2 class="text-3xl">Recente werk</h2>
             <?php 
                $homepagePosts = new WP_Query([
-                  "posts_per_page" => 5,
+                  "posts_per_page" => 3,
                   "orderby" => "date",
                   "order" => "DESC"
                ]);
