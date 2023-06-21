@@ -65,13 +65,19 @@
                            </p>
                            <a class="text-xs mt-4 uppercase font-bold tracking-wider text-main px-2 py-1 bg-accent-2 rounded" href="<?php the_permalink() ?>">Lees Meer</a>
                         </div>
-                        <div class="p-6">
+                        <div class="m-6 relative">
                            <?php the_post_thumbnail(); ?>
+                           <span class="absolute bottom-2 left-2 bg-main/70 backdrop-blur-sm text-accent-2 px-2 uppercase text-sm rounded font-bold">
+                              <?php echo get_the_date() ?>
+                           </span>
                         </div>
                      <?php } else { ?>
 
-                        <div class="p-6">
+                        <div class="m-6 relative">
                            <?php the_post_thumbnail(); ?>
+                           <span class="absolute bottom-2 right-2 bg-main/70 backdrop-blur-sm text-accent-2 px-2 uppercase text-sm rounded font-bold">
+                              <?php echo get_the_date() ?>
+                           </span>
                         </div>
                         <div class="flex flex-col my-auto items-start">
                            <h2 class="text-2xl mb-2 border-b-4 border-accent-1">
