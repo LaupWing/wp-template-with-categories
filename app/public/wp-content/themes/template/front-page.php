@@ -61,7 +61,7 @@
                               <?php the_title() ?>
                            </h2>
                            <p>
-                              <?php the_content() ?>
+                              <?php echo wp_strip_all_tags(get_the_content()); ?>
                            </p>
                         </div>
                         <div class="p-6">
@@ -77,7 +77,7 @@
                               <?php the_title() ?>
                            </h2>
                            <p>
-                              <?php the_content() ?>
+                              <?php echo wp_strip_all_tags(get_the_content()); ?>
                            </p>
                         </div>
                      <?php } ?>
