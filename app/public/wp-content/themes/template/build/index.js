@@ -422,7 +422,7 @@ __webpack_require__.r(__webpack_exports__);
     unit: "m2"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Number__WEBPACK_IMPORTED_MODULE_1__["default"], {
     label: "Wat is uw plafondhoogte? *",
-    value: formData.step5?.plafondhoogte || 250,
+    value: formData.step5?.plafondhoogte,
     name: "plafondhoogte",
     onChange: e => {
       update({

@@ -25,7 +25,7 @@ export default ({
                />
                <Number
                   label={"Wat is uw plafondhoogte? *"}
-                  value={formData.step5?.plafondhoogte || 250}
+                  value={formData.step5?.plafondhoogte}
                   name={"plafondhoogte"}
                   onChange={(e) => {
                      update({
