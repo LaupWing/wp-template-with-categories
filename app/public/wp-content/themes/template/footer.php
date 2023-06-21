@@ -3,6 +3,9 @@
          <div class="container mx-auto text-main text-2xl">
             <p>Hulp nodig of gratis advies? Bel <a class="underline text-accent-2" href="tel: 0851300479">085 1300 479</a></p>
          </div>
+         <div class="container mx-auto text-main mt-10">
+            <div id="socials"></div>
+         </div>
       </footer>
       <?php wp_footer(); ?>
    </body>
