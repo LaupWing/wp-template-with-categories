@@ -23,9 +23,6 @@
                   ]);
                ?>
             </nav>
-            <button class="px-2 py-1 ml-4 font-bold rounded bg-accent-2 text-main">
-               Direct offerte
-            </button>
          </div>
       </div>
    </header>
