@@ -8,7 +8,8 @@ module.exports = {
       "menu",
       "menu-item",
       "sub-menu",
-      "current-menu-item"
+      "current-menu-item",
+      "current-page-ancestor"
    ],
    theme: {
       extend: {

@@ -32,7 +32,7 @@
       @apply flex gap-4;
    }
 
-   .current-menu-item {
+   .current-menu-item > a, .current-page-ancestor > a {
       @apply font-bold;
    }
 
