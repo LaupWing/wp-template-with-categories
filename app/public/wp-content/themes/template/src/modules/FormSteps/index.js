@@ -113,7 +113,7 @@ const FormSteps = () => {
             {currentStep === 3 && <Step4 formData={formData} update={update} />}
             {currentStep === 4 && <Step5 formData={formData} update={update} />}
             {currentStep === 5 && <Step6 formData={formData} update={update} />}
-            <div className="mt-auto mx-auto flex gap-2">
+            <div className="mt-6 mx-auto flex gap-2">
                <button 
                   type="button"
                   className={currentStep === 0 ? 
