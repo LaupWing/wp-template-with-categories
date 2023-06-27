@@ -9,8 +9,15 @@
                while(have_posts()){
                   the_post();
             ?>
-               <div class="shadow bg-main">
-                  <h2><?php the_title() ?></h2>
+               <div class="shadow bg-main flex flex-col">
+                  <img 
+                     class="aspect-video object-cover"
+                     src="<?php echo get_the_post_thumbnail_url() ?>" 
+                     alt=""
+                  >
+                  <div class="px-4 py-2">
+                     <h2 class="font-bold text-accent-1"><?php the_title() ?></h2>
+                  </div>
                </div>
             <?php
                }

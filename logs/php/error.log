@@ -341,3 +341,4 @@ Stack trace:
 [19-Jun-2023 13:27:52 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php on line 77
 [19-Jun-2023 13:27:54 UTC] PHP Warning:  Undefined array key 0 in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php on line 77
 [19-Jun-2023 13:27:54 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\pin-d\Local Sites\template-with-categories\app\public\wp-content\themes\template\functions.php on line 77
+[27-Jun-2023 12:02:22 UTC] Cron unschedule event error for hook: do_pings, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":false,"args":[]}
