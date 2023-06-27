@@ -32,6 +32,9 @@
                }
             ?>
          </div>
+         <div class="mt-4">
+            <?php echo paginate_links(); ?>
+         </div>
       </div>
    </div>
 <?php 
