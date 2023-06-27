@@ -15,8 +15,17 @@
                      src="<?php echo get_the_post_thumbnail_url() ?>" 
                      alt=""
                   >
-                  <div class="px-4 py-2">
+                  <div class="px-4 py-2 flex flex-col">
                      <h2 class="font-bold text-accent-1"><?php the_title() ?></h2>
+                     <p class="text-sm">
+                        <?php echo wp_trim_words(wp_strip_all_tags(get_the_content()), 20, "..."); ?>
+                     </p>
+                     <a 
+                        href="<?php the_permalink() ?>"
+                        class="text-xs uppercase font-bold bg-accent-2 py-1 px-3 rounded text-main mt-6 mr-auto"
+                     >
+                        Lees Meer
+                     </a>
                   </div>
                </div>
             <?php
