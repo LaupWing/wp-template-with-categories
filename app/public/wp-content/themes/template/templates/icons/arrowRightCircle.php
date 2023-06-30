@@ -1,3 +1,6 @@
+<?php 
+   $custom_arrow_class = isset($args["custom_class"]) ? $args["custom_class"] : "w-6 h-6";
+?>
 <svg 
    xmlns="http://www.w3.org/2000/svg" 
    height="1em" 
