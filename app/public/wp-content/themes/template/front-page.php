@@ -62,7 +62,12 @@
                         <p class="text-xs sm:text-base">
                            <?php echo wp_trim_words(wp_strip_all_tags(get_the_content()), 50, "..."); ?>
                         </p>
-                        <a class="text-xs mt-4 uppercase font-bold tracking-wider text-main px-2 py-1 bg-accent-2 rounded" href="<?php the_permalink() ?>">Lees Meer</a>
+                        <a 
+                           class="text-xs mt-4 uppercase font-bold tracking-wider text-main px-2 py-1 bg-accent-2 rounded" 
+                           href="<?php the_permalink() ?>"
+                        >
+                           Lees Meer
+                        </a>
                      </div>
                      <div class="m-6 sm:relative absolute right-0 w-2/3">
                         <?php the_post_thumbnail(); ?>
@@ -85,7 +90,12 @@
                         <p>
                            <?php echo wp_trim_words(wp_strip_all_tags(get_the_content()), 50, "..."); ?>
                         </p>
-                        <a class="text-xs mt-4 uppercase font-bold tracking-wider text-main px-2 py-1 bg-accent-2 rounded" href="<?php the_permalink() ?>">Lees Meer</a>
+                        <a 
+                           class="text-xs mt-4 uppercase font-bold tracking-wider text-main px-2 py-1 bg-accent-2 rounded" 
+                           href="<?php the_permalink() ?>"
+                        >
+                           Lees Meer
+                        </a>
                      </div>
                   <?php } ?>
                </div>
