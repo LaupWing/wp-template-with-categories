@@ -8,7 +8,7 @@
       <div class="container mx-auto flex" id="form-steps"></div>
    </div>
    <div class="bg-accent-1 w-full py-4">
-      <div class="container text-center mx-auto text-main divide-x-2 divide-main/30 flex gap-2">
+      <div class="container flex-col sm:flex-row text-center mx-auto text-main divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-main/30 flex gap-2">
          <div class="flex-1 py-8">
             Hoogste kwaliteit, beste prijs
          </div>
