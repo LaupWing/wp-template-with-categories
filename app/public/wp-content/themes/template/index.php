@@ -2,9 +2,9 @@
    get_header()
 ?>
    <div class="min-h-screen-minus-nav flex flex-col bg-accent-1/10 py-6">
-      <div class="container flex flex-col flex-1">
+      <div class="custom-container flex flex-col flex-1">
          <h2 class="text-3xl text-accent-2 font-bold">Portfolio</h2>    
-         <div class="grid grid-cols-2 gap-4 my-6">
+         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
             <?php 
                while(have_posts()){
                   the_post();
