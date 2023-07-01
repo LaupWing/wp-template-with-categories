@@ -36,13 +36,22 @@
       </div>
    </header>
    <nav id="mobile" class="fixed inset-0 p-6 sm:hidden bg-main z-[100]">
-      <h1 class="font-bold mr-8 text-xl font-cursive">
-         <img 
-            src="<?php echo get_theme_file_uri("/images/logo.png") ?>" 
-            alt="logo"
-            class="w-56"
-         >
-      </h1>
+      <header class="flex items-center justify-between">
+         <h1 class="font-bold mr-8 text-xl font-cursive">
+            <img 
+               src="<?php echo get_theme_file_uri("/images/logo.png") ?>" 
+               alt="logo"
+               class="w-44"
+            >
+         </h1>
+         <?php get_template_part(
+            "templates/icons/close",
+            null,
+            array(
+               "custom_class" => "mr-4 w-6 h-6"
+            )
+         ) ?>
+      </header>
       <?php
          wp_nav_menu([
             "theme_location" => "headerMenuLocation"
