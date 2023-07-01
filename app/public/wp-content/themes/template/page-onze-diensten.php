@@ -2,9 +2,9 @@
    get_header()
 ?>
    <div class="min-h-screen-minus-nav bg-accent-1/40">
-      <div class="container mx-auto py-10 pb-12">
+      <div class="custom-container py-10 pb-12">
          <h2 class="text-3xl text-accent-1 font-bold">Onze diensten</h2>
-         <ul class="mt-6 grid grid-cols-3 gap-10">
+         <ul class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-10">
             <?php 
                $query = new WP_Query(array(
                   "post_type" => "page",
