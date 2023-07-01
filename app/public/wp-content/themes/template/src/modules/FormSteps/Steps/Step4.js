@@ -22,8 +22,8 @@ export default ({
    return (
       <div className="flex flex-1">
          <div className="flex-1 flex items-center flex-col w-full sm:w-3/5">
-            <h3 className="text-2xl">Betreft het nieuwbouw of een renovatie woning?</h3>
-            <div className="grid mt-6 gap-2 grid-cols-3">
+            <h3 className="sm:text-2xl text-xl">Betreft het nieuwbouw of een renovatie woning?</h3>
+            <div className="grid mt-6 gap-2 sm:grid-cols-3 grid-cols-2">
                {daken.map(type => (
                   <RadioImage
                      name={type.name}
