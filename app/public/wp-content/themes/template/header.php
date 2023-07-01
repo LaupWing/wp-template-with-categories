@@ -49,13 +49,15 @@
                class="w-44"
             >
          </h1>
-         <?php get_template_part(
-            "templates/icons/close",
-            null,
-            array(
-               "custom_class" => "mr-4 w-6 h-6"
-            )
-         ) ?>
+         <div id="close">
+            <?php get_template_part(
+               "templates/icons/close",
+               null,
+               array(
+                  "custom_class" => "mr-4 w-6 h-6"
+               )
+            ) ?>
+         </div>
       </header>
       <?php
          wp_nav_menu([
