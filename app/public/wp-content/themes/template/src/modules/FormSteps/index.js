@@ -81,7 +81,7 @@ const FormSteps = () => {
    return (
       <section className="flex-1 flex flex-col bg-main my-10 rounded shadow p-10">
          <div className="mb-4">
-            <h2 className="text-3xl">Binnen 1 minuut uw project berekenen?</h2>
+            <h2 className="md:text-3xl sm:text-2xl text-xl">Binnen 1 minuut uw project berekenen?</h2>
          </div>
          <div className="flex w-full gap-2">
             {[...new Array(7)].map((_, i) => (
