@@ -7,7 +7,7 @@ export default ({
    ...props
 }) => {
    return (
-      <div className={"flex flex-col text-lg items-start " + className}>
+      <div className={"flex flex-col sm:text-lg items-start " + className}>
          <p className="font-semibold">{label}</p>
          <input 
             type={type} 

@@ -546,7 +546,7 @@ __webpack_require__.r(__webpack_exports__);
   ...props
 }) => {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
-    className: "flex flex-col text-lg items-start " + className
+    className: "flex flex-col sm:text-lg items-start " + className
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("p", {
     className: "font-semibold"
   }, label), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("input", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
