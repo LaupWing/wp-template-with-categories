@@ -8,7 +8,7 @@
       >
          <h2 class="text-3xl text-accent-2 font-bold bg-main/60 p-4 backdrop-blur rounded"><?php the_title() ?></h2>    
       </div>
-      <div class="container mx-auto mt-6">
+      <div class="container px-4 mx-auto mt-6">
          <?php the_content() ?>
       </div>
    </div>
