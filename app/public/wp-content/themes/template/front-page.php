@@ -76,8 +76,8 @@
                         </span>
                      </div>
                   <?php } else { ?>
-
-                     <div class="m-6 relative">
+                     <div class="sm:hidden"></div>
+                     <div class="m-6 sm:relative absolute left-0 w-2/3">
                         <?php the_post_thumbnail(); ?>
                         <span class="absolute bottom-2 right-2 bg-main/70 backdrop-blur-sm text-accent-2 px-2 uppercase text-sm rounded font-bold">
                            <?php echo get_the_date() ?>
