@@ -37,7 +37,7 @@
    </header>
    <nav 
       id="mobile" 
-      class="fixed inset-0 p-6 sm:hidden bg-main z-[100] duration-200"
+      class="fixed inset-0 p-6 sm:hidden bg-main z-[100] duration-300"
       data-open="false"
       style="transform: translateX(-100%);"
    >
