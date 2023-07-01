@@ -23,9 +23,9 @@
          </div>
       </div>
    </div>
-   <div class="h-screen-minus-nav bg-main flex">
-      <div class="container grid gap-6 grid-cols-2 mx-auto pt-10">
-         <div class="col-span-1">
+   <div class="min-h-screen-minus-nav bg-main flex">
+      <div class="container px-4 grid gap-6 grid-cols-2 mx-auto pt-10">
+         <div class="sm:col-span-1 col-span-2">
             <h1 class="text-3xl text-accent-2 font-bold">
                <?php the_title() ?>
             </h1>
@@ -39,7 +39,7 @@
       </div>
    </div>
    <div class="flex flex-col py-10">
-      <div class="container mx-auto flex flex-col">
+      <div class="container px-4 mx-auto flex flex-col">
          <h2 class="text-3xl text-accent-2 font-bold">Recente werk</h2>
          <div class="mt-8 flex flex-col gap-y-10">
             <?php 
