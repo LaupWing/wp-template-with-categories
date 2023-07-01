@@ -6,7 +6,7 @@
    <?php wp_head() ?>
 </head>
 <body <?php body_class() ?>>
-   <header class="items-center h-nav bg-main flex sticky top-0 z-50">
+   <header class="items-center h-nav bg-main flex sticky top-0 z-[100]">
       <div class="container flex justify-between items-center mx-auto">
          <h1 class="font-bold mr-8 text-xl font-cursive">
             <img 
