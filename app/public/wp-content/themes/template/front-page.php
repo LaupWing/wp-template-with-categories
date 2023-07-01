@@ -3,7 +3,7 @@
 ?>
    <div 
       style="background: url('<?php echo get_theme_file_uri("/images/placeholder_bg.jpg") ?>'); background-size: cover;"
-      class="min-h-screen-minus-nav bg-main w-full flex"
+      class="min-h-screen-minus-nav bg-main w-full flex px-4"
    >
       <div class="container mx-auto flex" id="form-steps"></div>
    </div>
