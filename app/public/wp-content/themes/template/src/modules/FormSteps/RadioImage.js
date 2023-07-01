@@ -4,6 +4,7 @@ export default ({
    onChange,
    checked
 }) => {
+   const image = window.customData.placeholderImage
    return (
       <label 
          for={value}
@@ -19,7 +20,7 @@ export default ({
          />
          <div className="cursor-pointer w-24 h-24 sm:w-40 sm:h-40 peer-checked:bg-accent-1/10 bg-gray-100 border-[4px] border-gray-200 peer-checked:border-accent-1 flex flex-col items-center justify-center opacity-50 peer-checked:opacity-100">
             <img 
-               src="http://template-with-categories.local/wp-content/themes/template/images/placeholder_image.png" 
+               src={image} 
                alt={value}
                className="w-full"
             />

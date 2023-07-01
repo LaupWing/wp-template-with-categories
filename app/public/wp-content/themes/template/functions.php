@@ -3,6 +3,10 @@
 function loadAssets(){
    wp_enqueue_style("mainStyle", get_theme_file_uri("/build/index.css"));
    wp_enqueue_script("mainScript", get_theme_file_uri("build/index.js"), array("wp-element"), "1.0", true);
+
+   wp_localize_script("mainScript", "customData", [
+      "placeholderImage" => get_theme_file_uri("images/placeholder_image.png")
+   ]);
 }
 
 add_action("wp_enqueue_scripts", "loadAssets");
