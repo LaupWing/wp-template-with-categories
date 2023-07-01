@@ -55,7 +55,7 @@
             ?>
                <div class="grid grid-cols-2 relative">
                   <?php if($counter%2 === 0) {?>
-                     <div class="flex flex-col my-auto items-start z-50 bg-main/80 backdrop-blur rounded shadow p-2">
+                     <div class="flex flex-col my-auto items-start z-50 bg-main/80 backdrop-blur rounded sm:shadow-none shadow p-2 sm:p-0">
                         <h2 class="sm:text-2xl text-xl mb-2 border-b-4 border-accent-1">
                            <?php the_title() ?>
                         </h2>
