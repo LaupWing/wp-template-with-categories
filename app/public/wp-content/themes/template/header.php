@@ -7,7 +7,7 @@
 </head>
 <body class="w-screen" <?php body_class() ?>>
    <header class="items-center h-nav bg-main flex sticky top-0 z-50">
-      <div class="container flex justify-between items-center mx-auto px-2">
+      <div class="container flex justify-between items-center mx-auto">
          <h1 class="font-bold mr-8 text-xl font-cursive">
             <img 
                src="<?php echo get_theme_file_uri("/images/logo.png") ?>" 
@@ -15,7 +15,15 @@
                class="w-56"
             >
          </h1>
-         
+         <div class="flex sm:hidden">
+            <?php get_template_part(
+               "templates/icons/bars",
+               null,
+               array(
+                  "custom_class" => "mr-4 w-6 h-6"
+               )
+            ) ?>
+         </div>
          <div class="sm:flex items-center hidden">
             <nav>
                <?php
