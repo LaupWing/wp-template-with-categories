@@ -2,6 +2,24 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/modules/SideNav/index.js":
+/*!**************************************!*\
+  !*** ./src/modules/SideNav/index.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ SideNav)
+/* harmony export */ });
+class SideNav {
+  constructor() {
+    this.el = document.querySelector("nav#mobile");
+  }
+}
+
+/***/ }),
+
 /***/ "./src/modules/Socials/index.js":
 /*!**************************************!*\
   !*** ./src/modules/Socials/index.js ***!
@@ -3857,10 +3875,13 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_Socials__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/Socials */ "./src/modules/Socials/index.js");
+/* harmony import */ var _modules_SideNav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/SideNav */ "./src/modules/SideNav/index.js");
 if (window.location.pathname === "/") {
   __webpack_require__.e(/*! import() */ "src_modules_FormSteps_index_js").then(__webpack_require__.bind(__webpack_require__, /*! ./modules/FormSteps */ "./src/modules/FormSteps/index.js"));
 }
 
+
+new _modules_SideNav__WEBPACK_IMPORTED_MODULE_1__["default"]();
 })();
 
 /******/ })()

@@ -15,7 +15,7 @@
                class="w-56"
             >
          </h1>
-         <div class="flex sm:hidden">
+         <div id="menu" class="flex sm:hidden">
             <?php get_template_part(
                "templates/icons/bars",
                null,
@@ -35,7 +35,12 @@
          </div>
       </div>
    </header>
-   <nav id="mobile" class="fixed inset-0 p-6 sm:hidden bg-main z-[100]">
+   <nav 
+      id="mobile" 
+      class="fixed inset-0 p-6 sm:hidden bg-main z-[100] duration-200"
+      data-open="false"
+      style="transform: translateX(-100%);"
+   >
       <header class="flex items-center justify-between">
          <h1 class="font-bold mr-8 text-xl font-cursive">
             <img 
