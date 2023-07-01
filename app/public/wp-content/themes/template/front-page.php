@@ -55,11 +55,11 @@
             ?>
                <div class="grid grid-cols-2 relative">
                   <?php if($counter%2 === 0) {?>
-                     <div class="flex flex-col my-auto items-start z-50">
+                     <div class="flex flex-col my-auto items-start z-50 bg-main/80 backdrop-blur rounded shadow p-2">
                         <h2 class="sm:text-2xl text-xl mb-2 border-b-4 border-accent-1">
                            <?php the_title() ?>
                         </h2>
-                        <p class="text-sm sm:text-base">
+                        <p class="text-xs sm:text-base">
                            <?php echo wp_trim_words(wp_strip_all_tags(get_the_content()), 50, "..."); ?>
                         </p>
                         <a class="text-xs mt-4 uppercase font-bold tracking-wider text-main px-2 py-1 bg-accent-2 rounded" href="<?php the_permalink() ?>">Lees Meer</a>
