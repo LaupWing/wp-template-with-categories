@@ -33,7 +33,7 @@
 
 @layer base {
    .menu {
-      @apply flex gap-4;
+      @apply flex gap-4 mt-6 ml-2;
    }
 
    .current-menu-item > a, .current-page-ancestor > a {
@@ -57,21 +57,10 @@
    }
 
    #mobile .menu {
-      @apply flex-col;
-   }
-   #mobile .menu .menu-item,  
-   #mobile .menu .menu-item .sub-menu .menu-item{
-      @apply relative px-2;
+      @apply flex-col gap-4;
    }
 
    #mobile .menu .menu-item .sub-menu{
-      @apply absolute bg-white hidden group-hover:block border bottom-0 left-0 translate-y-full shadow rounded;
-   }
-   #mobile .menu .menu-item:hover .sub-menu {
-      display: block;
-   }
-
-   #mobile .menu .menu-item .sub-menu .menu-item{
-      @apply  py-1;
+      @apply pl-4 mt-2 flex flex-col gap-2;
    }
 }
