@@ -24,7 +24,7 @@
       </div>
    </div>
    <div class="h-screen-minus-nav bg-main flex">
-      <div class="container grid gap-6 grid-cols-2 mx-auto pt-10">
+      <!-- <div class="container grid gap-6 grid-cols-2 mx-auto pt-10">
          <div class="col-span-1">
             <h1 class="text-3xl text-accent-2 font-bold">
                <?php the_title() ?>
@@ -36,10 +36,10 @@
          <div class="col-span-1 my-auto">
             <?php the_post_thumbnail(); ?>
          </div>
-      </div>
+      </div> -->
    </div>
    <div class="flex flex-col py-10">
-      <div class="container mx-auto flex flex-col">
+      <!-- <div class="container mx-auto flex flex-col">
          <h2 class="text-3xl text-accent-2 font-bold">Recente werk</h2>
          <div class="mt-8 flex flex-col gap-y-10">
             <?php 
@@ -93,7 +93,7 @@
                $counter++;
                } wp_reset_postdata();
             ?>
-         </div>
+         </div> -->
       </div>
    </div>
 <?php 
