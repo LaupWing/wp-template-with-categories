@@ -25,7 +25,7 @@
             ) ?>
          </div>
          <div class="sm:flex items-center hidden">
-            <nav>
+            <nav id="desktop">
                <?php
                   wp_nav_menu([
                      "theme_location" => "headerMenuLocation"
@@ -35,4 +35,18 @@
          </div>
       </div>
    </header>
+   <nav class="fixed inset-0 p-6 sm:hidden bg-main z-[100]">
+      <h1 class="font-bold mr-8 text-xl font-cursive">
+         <img 
+            src="<?php echo get_theme_file_uri("/images/logo.png") ?>" 
+            alt="logo"
+            class="w-56"
+         >
+      </h1>
+      <?php
+         wp_nav_menu([
+            "theme_location" => "headerMenuLocation"
+         ]);
+      ?>
+   </nav>
    <main>
