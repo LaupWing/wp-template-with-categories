@@ -53,9 +53,9 @@
                while($homepagePosts->have_posts()){
                   $homepagePosts->the_post();
             ?>
-               <div class="grid grid-cols-2">
+               <div class="grid grid-cols-2 relative">
                   <?php if($counter%2 === 0) {?>
-                     <div class="flex flex-col my-auto items-start">
+                     <div class="flex flex-col my-auto items-start z-50">
                         <h2 class="text-2xl mb-2 border-b-4 border-accent-1">
                            <?php the_title() ?>
                         </h2>
@@ -64,7 +64,7 @@
                         </p>
                         <a class="text-xs mt-4 uppercase font-bold tracking-wider text-main px-2 py-1 bg-accent-2 rounded" href="<?php the_permalink() ?>">Lees Meer</a>
                      </div>
-                     <div class="m-6 relative ">
+                     <div class="m-6 sm:relative absolute inset-0">
                         <?php the_post_thumbnail(); ?>
                         <span class="absolute bottom-2 left-2 bg-main/70 backdrop-blur-sm text-accent-2 px-2 uppercase text-sm rounded font-bold">
                            <?php echo get_the_date() ?>
