@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
   onChange
 }) => {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "flex flex-col text-lg items-start"
+    className: "flex flex-col sm:text-lg items-start"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     className: "font-semibold"
   }, label), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -62,7 +62,7 @@ __webpack_require__.r(__webpack_exports__);
   checked
 }) => {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "flex flex-col text-lg"
+    className: "flex flex-col sm:text-lg"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     className: "font-semibold"
   }, label), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {

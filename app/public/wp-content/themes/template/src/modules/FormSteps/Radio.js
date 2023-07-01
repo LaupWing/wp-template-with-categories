@@ -6,7 +6,7 @@ export default ({
    checked
 }) => {
    return (
-      <div className="flex flex-col text-lg">
+      <div className="flex flex-col sm:text-lg">
          <p className="font-semibold">{label}</p>
          <div className="flex gap-4 mt-1">
             {values.map(value => (
