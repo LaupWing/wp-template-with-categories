@@ -40,19 +40,38 @@
       @apply font-bold;
    }
 
-   .menu .menu-item,  
-   .menu .menu-item .sub-menu .menu-item{
+   #desktop .menu .menu-item,  
+   #desktop .menu .menu-item .sub-menu .menu-item{
       @apply relative px-2;
    }
 
-   .menu .menu-item .sub-menu{
+   #desktop .menu .menu-item .sub-menu{
       @apply absolute bg-white hidden group-hover:block border bottom-0 left-0 translate-y-full shadow rounded;
    }
-   .menu .menu-item:hover .sub-menu {
+   #desktop .menu .menu-item:hover .sub-menu {
       display: block;
    }
 
-   .menu .menu-item .sub-menu .menu-item{
+   #desktop .menu .menu-item .sub-menu .menu-item{
+      @apply  py-1;
+   }
+
+   #mobile .menu {
+      @apply flex-col;
+   }
+   #mobile .menu .menu-item,  
+   #mobile .menu .menu-item .sub-menu .menu-item{
+      @apply relative px-2;
+   }
+
+   #mobile .menu .menu-item .sub-menu{
+      @apply absolute bg-white hidden group-hover:block border bottom-0 left-0 translate-y-full shadow rounded;
+   }
+   #mobile .menu .menu-item:hover .sub-menu {
+      display: block;
+   }
+
+   #mobile .menu .menu-item .sub-menu .menu-item{
       @apply  py-1;
    }
 }

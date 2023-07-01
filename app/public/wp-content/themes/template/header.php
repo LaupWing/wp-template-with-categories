@@ -35,7 +35,7 @@
          </div>
       </div>
    </header>
-   <nav class="fixed inset-0 p-6 sm:hidden bg-main z-[100]">
+   <nav id="mobile" class="fixed inset-0 p-6 sm:hidden bg-main z-[100]">
       <h1 class="font-bold mr-8 text-xl font-cursive">
          <img 
             src="<?php echo get_theme_file_uri("/images/logo.png") ?>" 
