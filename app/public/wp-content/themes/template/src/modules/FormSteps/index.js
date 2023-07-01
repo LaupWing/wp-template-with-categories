@@ -86,7 +86,7 @@ const FormSteps = () => {
          <div className="flex w-full gap-2">
             {[...new Array(7)].map((_, i) => (
                <div 
-                  className={`h-2 cursor-pointer flex-1 ${
+                  className={`sm:h-2 h-1 cursor-pointer flex-1 ${
                      i <= currentStep 
                         ? i === currentStep 
                            ? "bg-accent-1" 

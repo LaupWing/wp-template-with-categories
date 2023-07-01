@@ -657,7 +657,7 @@ const FormSteps = () => {
   }, "Binnen 1 minuut uw project berekenen?")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex w-full gap-2"
   }, [...new Array(7)].map((_, i) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: `h-2 cursor-pointer flex-1 ${i <= currentStep ? i === currentStep ? "bg-accent-1" : "bg-accent-1/40" : i > getUnfinishedIndex(formData) ? "bg-gray-300" : "bg-accent-1/40"} 
+    className: `sm:h-2 h-1 cursor-pointer flex-1 ${i <= currentStep ? i === currentStep ? "bg-accent-1" : "bg-accent-1/40" : i > getUnfinishedIndex(formData) ? "bg-gray-300" : "bg-accent-1/40"} 
                   `,
     onClick: () => {
       setCurrentStep(i);
