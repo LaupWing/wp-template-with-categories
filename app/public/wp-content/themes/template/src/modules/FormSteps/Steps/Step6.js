@@ -9,22 +9,26 @@ export default () => {
                   label={"E-mailadres *"}
                   name={"email"}
                   value={""}
+                  className="col-span-2 sm:col-span-1"
                   type="email"
                />
                <Text
                   label={"Telefoonnummer *"}
                   name={"telefoonnummer"}
                   value={""}
+                  className="col-span-2 sm:col-span-1"
                   type="email"
                />
                <Text
                   label={"Voornaam *"}
                   name={"voornaam"}
+                  className="col-span-2 sm:col-span-1"
                   value={""}
                />
                <Text
                   label={"Achternaam *"}
                   name={"achternaam"}
+                  className="col-span-2 sm:col-span-1"
                   value={""}
                />
                <Text

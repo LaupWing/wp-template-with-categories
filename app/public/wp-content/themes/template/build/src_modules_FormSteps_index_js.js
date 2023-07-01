@@ -488,19 +488,23 @@ __webpack_require__.r(__webpack_exports__);
     label: "E-mailadres *",
     name: "email",
     value: "",
+    className: "col-span-2 sm:col-span-1",
     type: "email"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Text__WEBPACK_IMPORTED_MODULE_1__["default"], {
     label: "Telefoonnummer *",
     name: "telefoonnummer",
     value: "",
+    className: "col-span-2 sm:col-span-1",
     type: "email"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Text__WEBPACK_IMPORTED_MODULE_1__["default"], {
     label: "Voornaam *",
     name: "voornaam",
+    className: "col-span-2 sm:col-span-1",
     value: ""
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Text__WEBPACK_IMPORTED_MODULE_1__["default"], {
     label: "Achternaam *",
     name: "achternaam",
+    className: "col-span-2 sm:col-span-1",
     value: ""
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Text__WEBPACK_IMPORTED_MODULE_1__["default"], {
     label: "Opmerkingen/bijzonderheden?",
