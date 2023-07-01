@@ -39,7 +39,7 @@
       </div>
    </div>
    <div class="flex flex-col py-10">
-      <div class="container px-4 mx-auto flex flex-col">
+      <div class="custom-container flex flex-col">
          <h2 class="text-3xl text-accent-2 font-bold">Recente werk</h2>
          <div class="mt-8 flex flex-col gap-y-10">
             <?php 
