@@ -25,6 +25,10 @@
    @supports (height: 100dvh) {
       --screen-height-dynamic: 100dvh;
    }
+
+   .custom-container {
+      @apply container px-4 mx-auto;
+   }
 }
 
 @layer base {
