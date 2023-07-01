@@ -15,15 +15,7 @@
                class="w-56"
             >
          </h1>
-         <div class="flex sm:hidden">
-            <?php get_template_part(
-               "templates/icons/bars",
-               null,
-               array(
-                  "custom_class" => "mr-4 w-6 h-6"
-               )
-            ) ?>
-         </div>
+         
          <div class="sm:flex items-center hidden">
             <nav>
                <?php
