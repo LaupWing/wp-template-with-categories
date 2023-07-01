@@ -59,8 +59,8 @@
                         <h2 class="text-2xl mb-2 border-b-4 border-accent-1">
                            <?php the_title() ?>
                         </h2>
-                        <p>
-                        <?php echo wp_trim_words(wp_strip_all_tags(get_the_content()), 50, "..."); ?>
+                        <p class="text-sm sm:text-base">
+                           <?php echo wp_trim_words(wp_strip_all_tags(get_the_content()), 50, "..."); ?>
                         </p>
                         <a class="text-xs mt-4 uppercase font-bold tracking-wider text-main px-2 py-1 bg-accent-2 rounded" href="<?php the_permalink() ?>">Lees Meer</a>
                      </div>
