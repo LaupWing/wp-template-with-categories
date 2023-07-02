@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+   --color-main: 255 255 255;
+   --color-accent1: 0 115 103;
+   --color-accent2: 30 34 170;
+   --height-nav: 4rem;
+   --screen-height: 100vh;
+   --screen-height-dynamic: 100vh;
+
+   @media (min-width: 32em) {
+      --height-nav: 5rem;
+   }
+
+   @media (min-width: 48em) {
+      --height-nav: 6rem;
+   }
+
+   @supports (height: 100svh) {
+      --screen-height: 100svh;
+   }
+
+   @supports (height: 100dvh) {
+      --screen-height-dynamic: 100dvh;
+   }
+
+   .custom-container {
+      @apply container px-4 mx-auto;
+   }
+}
+
+@layer base {
+   .menu {
+      @apply flex gap-4 mt-6 ml-2;
+   }
+
+   .current-menu-item > a, .current-page-ancestor > a {
+      @apply font-bold;
+   }
+
+   #desktop .menu .menu-item,  
+   #desktop .menu .menu-item .sub-menu .menu-item{
+      @apply relative px-2;
+   }
+
+   #desktop .menu .menu-item .sub-menu{
+      @apply absolute bg-white hidden group-hover:block border bottom-0 left-0 translate-y-full shadow rounded;
+   }
+   #desktop .menu .menu-item:hover .sub-menu {
+      display: block;
+   }
+
+   #desktop .menu .menu-item .sub-menu .menu-item{
+      @apply  py-1;
+   }
+
+   #mobile .menu {
+      @apply flex-col gap-4;
+   }
+
+   #mobile .menu .menu-item .sub-menu{
+      @apply pl-4 mt-2 flex flex-col gap-2;
+   }
+}
