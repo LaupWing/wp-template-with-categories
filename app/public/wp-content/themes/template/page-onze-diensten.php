@@ -6,13 +6,13 @@
          <h2 class="text-3xl text-accent-1 font-bold">Onze diensten</h2>
          <ul class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-10">
             <?php 
+               $parent_page = get_page_by_path("onze-diensten");
                $query = new WP_Query(array(
                   "post_type" => "page",
                   "post_status" => "publish",
                   "posts_per_page" => -1,
-                  "post_parent" => 9
+                  "post_parent" => $parent_page->ID
                ));
-
                if($query->have_posts()) {
                   while($query->have_posts()){
                      $query->the_post();
