@@ -130,7 +130,7 @@
                <?php the_content() ?>
             </div>
          </div>
-         <div class="col-span-1 my-auto">
+         <div class="col-span-2 sm:col-span-1 my-auto">
             <?php the_post_thumbnail(); ?>
          </div>
       </div>
