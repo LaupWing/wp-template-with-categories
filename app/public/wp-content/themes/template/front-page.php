@@ -14,6 +14,13 @@
          </div>
          <div class="flex-1 flex items-center justify-center py-4 sm:py-8">
             Vakmanschap Gegarandeerd
+            <?php get_template_part(
+               "templates/icons/checkmarkCircle",
+               null,
+               array(
+                  "custom_class" => "ml-2 w-5 h-5 fill-current"
+               )
+            ) ?>
          </div>
          <div class="flex-1 flex items-center justify-center py-4 sm:py-8">
             Kies Voor Perfectie
