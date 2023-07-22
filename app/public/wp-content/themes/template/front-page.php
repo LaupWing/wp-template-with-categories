@@ -23,21 +23,7 @@
          </div>
       </div>
    </div>
-   <div class="min-h-screen-minus-nav bg-main flex">
-      <div class="custom-container grid gap-6 grid-cols-2 pt-10">
-         <div class="sm:col-span-1 col-span-2">
-            <h1 class="text-3xl text-accent-2 font-bold">
-               <?php the_title() ?>
-            </h1>
-            <div class="mt-8">
-               <?php the_content() ?>
-            </div>
-         </div>
-         <div class="col-span-1 my-auto">
-            <?php the_post_thumbnail(); ?>
-         </div>
-      </div>
-   </div>
+   
    <div class="flex flex-col py-10">
       <div class="custom-container flex flex-col">
          <h2 class="text-3xl text-accent-2 font-bold">Recente werk</h2>
@@ -103,6 +89,21 @@
                $counter++;
                } wp_reset_postdata();
             ?>
+         </div>
+      </div>
+   </div>
+   <div class="min-h-screen-minus-nav flex bg-accent-1/10">
+      <div class="custom-container grid gap-6 grid-cols-2 pt-10">
+         <div class="sm:col-span-1 col-span-2">
+            <h1 class="text-3xl text-accent-2 font-bold">
+               <?php the_title() ?>
+            </h1>
+            <div class="mt-8">
+               <?php the_content() ?>
+            </div>
+         </div>
+         <div class="col-span-1 my-auto">
+            <?php the_post_thumbnail(); ?>
          </div>
       </div>
    </div>
