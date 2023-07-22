@@ -5,6 +5,7 @@ import Step3 from "./Steps/Step3"
 import Step4 from "./Steps/Step4"
 import Step5 from "./Steps/Step5"
 import Step6 from "./Steps/Step6"
+import Step7 from "./Steps/Step7"
 
 const stepsSkelet = {
    step1: {
@@ -113,6 +114,7 @@ const FormSteps = () => {
             {currentStep === 3 && <Step4 formData={formData} update={update} />}
             {currentStep === 4 && <Step5 formData={formData} update={update} />}
             {currentStep === 5 && <Step6 formData={formData} update={update} />}
+            {currentStep === 6 && <Step7 formData={formData} update={update} />}
             <div className="mt-6 mx-auto flex gap-2">
                <button 
                   type="button"
