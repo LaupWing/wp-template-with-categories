@@ -50,7 +50,7 @@ const FormSteps = () => {
       )
    })
    
-   const [currentStep, setCurrentStep] = useState(0)
+   const [currentStep, setCurrentStep] = useState(6)
    
    const update = (e) => {
       setFormData(prev => ({
@@ -75,7 +75,7 @@ const FormSteps = () => {
       if(localStorage.getItem("formData")){
          const data = JSON.parse(localStorage.getItem("formData"))
          const index = getUnfinishedIndex(data)
-         setCurrentStep(index)
+         // setCurrentStep(index)
       }
    }, [])
    
