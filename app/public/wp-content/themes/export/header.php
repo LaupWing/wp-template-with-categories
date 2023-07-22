@@ -9,11 +9,13 @@
    <header class="items-center h-nav bg-main flex sticky top-0 z-[100]">
       <div class="container flex justify-between items-center mx-auto">
          <h1 class="font-bold mr-8 text-xl font-cursive">
-            <img 
-               src="<?php echo get_theme_file_uri("/images/logo.png") ?>" 
-               alt="logo"
-               class="w-56"
-            >
+            <a href="<?php echo home_url() ?>">
+               <img 
+                  src="<?php echo get_theme_file_uri("/images/logo.png") ?>" 
+                  alt="logo"
+                  class="w-56"
+               >
+            </a>
          </h1>
          <div id="menu" class="flex sm:hidden">
             <?php get_template_part(

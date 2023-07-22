@@ -1,43 +1,68 @@
 <?php 
    get_header()
 ?>
+   <div class="fixed bottom-3 text-white flex justify-center items-center w-12 h-12 rounded-full left-3 bg-accent-1 z-[100] shadow">
+      <a href="tel:+31640719058">
+         <?php get_template_part(
+            "templates/icons/whatsapp",
+            null,
+            array(
+               "custom_class" => "w-7 h-7 fill-current"
+            )
+         ) ?>
+      </a>
+   </div>
    <div 
       style="background: url('<?php echo get_theme_file_uri("/images/placeholder_bg.jpg") ?>'); background-size: cover;"
       class="min-h-screen-minus-nav bg-main w-full flex px-4"
    >
       <div class="container mx-auto flex" id="form-steps"></div>
    </div>
-   <div class="bg-accent-1 w-full py-4">
-      <div class="container flex-col sm:flex-row text-center mx-auto text-main divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-main/30 flex gap-2">
-         <div class="flex-1 py-8">
+   <div class="bg-accent-1 w-full">
+      <div class="container flex-col sm:flex-row text-center mx-auto text-main divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-main/30 flex">
+         <div class="flex-1 flex items-center justify-center py-4 sm:py-8">
             Hoogste kwaliteit, beste prijs
+            <?php get_template_part(
+               "templates/icons/ribbon",
+               null,
+               array(
+                  "custom_class" => "ml-2 w-5 h-5 fill-current"
+               )
+            ) ?>
          </div>
-         <div class="flex-1 py-8">
-            Hoogste kwaliteit, beste prijs
+         <div class="flex-1 flex items-center justify-center py-4 sm:py-8">
+            Vakmanschap Gegarandeerd
+            <?php get_template_part(
+               "templates/icons/checkmarkCircle",
+               null,
+               array(
+                  "custom_class" => "ml-2 w-5 h-5 fill-current"
+               )
+            ) ?>
          </div>
-         <div class="flex-1 py-8">
-            Hoogste kwaliteit, beste prijs
+         <div class="flex-1 flex items-center justify-center py-4 sm:py-8">
+            Kies Voor Perfectie
+            <?php get_template_part(
+               "templates/icons/star",
+               null,
+               array(
+                  "custom_class" => "ml-2 w-5 h-5 fill-current"
+               )
+            ) ?>
          </div>
-         <div class="flex-1 py-8">
-            Hoogste kwaliteit, beste prijs
+         <div class="flex-1 flex items-center justify-center py-4 sm:py-8">
+            Oog voor Detail 
+            <?php get_template_part(
+               "templates/icons/eye",
+               null,
+               array(
+                  "custom_class" => "ml-2 w-5 h-5 fill-current"
+               )
+            ) ?>
          </div>
       </div>
    </div>
-   <div class="min-h-screen-minus-nav bg-main flex">
-      <div class="custom-container grid gap-6 grid-cols-2 pt-10">
-         <div class="sm:col-span-1 col-span-2">
-            <h1 class="text-3xl text-accent-2 font-bold">
-               <?php the_title() ?>
-            </h1>
-            <div class="mt-8">
-               <?php the_content() ?>
-            </div>
-         </div>
-         <div class="col-span-1 my-auto">
-            <?php the_post_thumbnail(); ?>
-         </div>
-      </div>
-   </div>
+   
    <div class="flex flex-col py-10">
       <div class="custom-container flex flex-col">
          <h2 class="text-3xl text-accent-2 font-bold">Recente werk</h2>
@@ -103,6 +128,21 @@
                $counter++;
                } wp_reset_postdata();
             ?>
+         </div>
+      </div>
+   </div>
+   <div class="min-h-screen-minus-nav flex bg-accent-1/10">
+      <div class="custom-container grid gap-6 grid-cols-2 pt-10">
+         <div class="sm:col-span-1 col-span-2">
+            <h1 class="text-3xl text-accent-2 font-bold">
+               <?php the_title() ?>
+            </h1>
+            <div class="mt-8">
+               <?php the_content() ?>
+            </div>
+         </div>
+         <div class="col-span-2 sm:col-span-1 my-auto">
+            <?php the_post_thumbnail(); ?>
          </div>
       </div>
    </div>
