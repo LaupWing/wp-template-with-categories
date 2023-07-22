@@ -13,13 +13,13 @@
             Hoogste kwaliteit, beste prijs
          </div>
          <div class="flex-1 py-4 sm:py-8">
-            Hoogste kwaliteit, beste prijs
+            Vakmanschap Gegarandeerd
          </div>
          <div class="flex-1 py-4 sm:py-8">
-            Hoogste kwaliteit, beste prijs
+            Kies Voor Perfectie
          </div>
          <div class="flex-1 py-4 sm:py-8">
-            Hoogste kwaliteit, beste prijs
+            Oog voor Detail
          </div>
       </div>
    </div>
