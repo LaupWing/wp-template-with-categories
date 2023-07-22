@@ -1,6 +1,17 @@
 <?php 
    get_header()
 ?>
+   <div class="fixed bottom-3 text-white flex justify-center items-center w-12 h-12 rounded-full left-3 bg-accent-1 z-[100] shadow">
+      <a href="tel:+31640719058">
+         <?php get_template_part(
+            "templates/icons/whatsapp",
+            null,
+            array(
+               "custom_class" => "w-7 h-7 fill-current"
+            )
+         ) ?>
+      </a>
+   </div>
    <div 
       style="background: url('<?php echo get_theme_file_uri("/images/placeholder_bg.jpg") ?>'); background-size: cover;"
       class="min-h-screen-minus-nav bg-main w-full flex px-4"
