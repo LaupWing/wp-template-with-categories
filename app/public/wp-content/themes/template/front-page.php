@@ -11,6 +11,13 @@
       <div class="container flex-col sm:flex-row text-center mx-auto text-main divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-main/30 flex">
          <div class="flex-1 flex items-center justify-center py-4 sm:py-8">
             Hoogste kwaliteit, beste prijs
+            <?php get_template_part(
+               "templates/icons/ribbon",
+               null,
+               array(
+                  "custom_class" => "ml-2 w-5 h-5 fill-current"
+               )
+            ) ?>
          </div>
          <div class="flex-1 flex items-center justify-center py-4 sm:py-8">
             Vakmanschap Gegarandeerd
