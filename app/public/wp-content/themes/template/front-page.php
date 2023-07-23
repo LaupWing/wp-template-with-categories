@@ -131,7 +131,7 @@
          </div>
       </div>
    </div>
-   <div class="min-h-screen-minus-nav flex bg-accent-1/10">
+   <div class="min-h-screen-minus-nav flex">
       <div class="custom-container grid gap-6 grid-cols-2 pt-10">
          <div class="sm:col-span-1 col-span-2">
             <h1 class="text-3xl text-accent-2 font-bold">

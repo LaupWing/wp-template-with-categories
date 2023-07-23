@@ -1,4 +1,7 @@
       </main>
+      <div class="clipped">
+
+      </div>
       <footer class="py-16 bg-accent-1 mt-auto">
          <div class="custom-container flex flex-col gap-1 sm:flex-row justify-between text-main text-2xl">
             <p class="font-bold text-main/40">Geïnteresseerd?</p>

@@ -40,6 +40,14 @@
       @apply font-bold;
    }
 
+   .clipped {
+      padding: 40px;
+      -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
+      clip-path: polygon(0 0, 0% 100%, 100% 100%);
+      @apply w-full bg-accent-1 -mb-[1px];
+    }
+    
+
    footer .menu {
       @apply flex flex-col gap-4;
    }
