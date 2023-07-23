@@ -30,10 +30,10 @@ const stepsSkelet = {
    },
    step6: {
       email: null,
-      telefoonnummer: null,
-      achternaam: null,
-      opmerkingen: null,
-      datum: null
+      phonenumber: null,
+      firstname: null,
+      lastname: null,
+      date: null
    },
 }
 
@@ -64,6 +64,13 @@ const FormSteps = () => {
    }, [formData])
 
    const getUnfinishedIndex = (data) => {
+      if(Object.keys(data).every((key) => {
+         if(Object.keys(stepsSkelet[key]).every(x => data[key] && data[key][x])){
+            return key
+         }
+      })){
+         return Object.keys(stepsSkelet).length
+      }
       return Object.keys(data).findIndex((key) => {
          if(!Object.keys(stepsSkelet[key]).every(x => data[key] && data[key][x])){
             return key
