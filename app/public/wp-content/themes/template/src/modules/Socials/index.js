@@ -5,7 +5,7 @@ const Socials = () => {
    return (
       <div className="flex flex-col">
          <h2 className="font-bold text-xl">Socials</h2>
-         <ul className="mt-4 flex flex-col gap-2 opacity-70">
+         <ul className="mt-4 flex flex-col gap-4 opacity-70">
             <li className="flex gap-2 items-center">
                <AiFillInstagram size={22}/>
                Instagram

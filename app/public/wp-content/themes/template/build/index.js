@@ -55,7 +55,7 @@ const Socials = () => {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
     className: "font-bold text-xl"
   }, "Socials"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-    className: "mt-4 flex flex-col gap-2 opacity-70"
+    className: "mt-4 flex flex-col gap-4 opacity-70"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
     className: "flex gap-2 items-center"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_icons_ai__WEBPACK_IMPORTED_MODULE_1__.AiFillInstagram, {

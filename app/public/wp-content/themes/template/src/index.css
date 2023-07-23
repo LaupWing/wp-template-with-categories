@@ -32,12 +32,19 @@
 }
 
 @layer base {
-   .menu {
+   header .menu {
       @apply flex gap-4 mt-6 ml-2;
    }
 
    .current-menu-item > a, .current-page-ancestor > a {
       @apply font-bold;
+   }
+
+   footer .menu {
+      @apply flex flex-col gap-4;
+   }
+   footer .menu  .sub-menu {
+      @apply hidden;
    }
 
    #desktop .menu .menu-item,  
