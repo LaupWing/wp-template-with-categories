@@ -1,6 +1,9 @@
 import Text from "../Text"
 
-export default () => {
+export default ({
+   formData,
+   update
+}) => {
    return (
       <div className="flex flex-1">
          <div className="flex-1 flex items-center flex-col">
@@ -8,7 +11,7 @@ export default () => {
                <Text
                   label={"E-mailadres *"}
                   name={"email"}
-                  value={""}
+                  value={formData.step6?.email || ""}
                   className="col-span-2 sm:col-span-1"
                   type="email"
                />
