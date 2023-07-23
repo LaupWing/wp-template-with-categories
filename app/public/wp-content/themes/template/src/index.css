@@ -40,7 +40,7 @@
       @apply font-bold;
    }
    #mobile .current-menu-item, .current-page-ancestor {
-      @apply bg-accent-1/80 text-white p-1 rounded;
+      @apply bg-accent-1/80 text-white rounded;
    }
 
    .clipped {
@@ -78,6 +78,9 @@
       @apply flex flex-col gap-6 mt-10;
    }
 
+   #mobile .menu .menu-item{
+      @apply px-2 py-1;
+   }
    #mobile .menu .menu-item .sub-menu{
       @apply pl-4 mt-2 flex flex-col gap-2;
    }
