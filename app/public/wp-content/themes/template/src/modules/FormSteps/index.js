@@ -113,7 +113,7 @@ const FormSteps = () => {
          </div>
          <form 
             action=""
-            className="p-4 pt-6 flex-1 flex flex-col"
+            className="sm:p-4 pt-6 flex-1 flex flex-col"
          >
             {currentStep === 0 && <Step1 formData={formData} update={update} />}
             {currentStep === 1 && <Step2 formData={formData} update={update} />}
@@ -121,7 +121,7 @@ const FormSteps = () => {
             {currentStep === 3 && <Step4 formData={formData} update={update} />}
             {currentStep === 4 && <Step5 formData={formData} update={update} />}
             {currentStep === 5 && <Step6 formData={formData} update={update} />}
-            {currentStep === 6 && <Step7 formData={formData} update={update} />}
+            {currentStep === 6 && <Step7 formData={formData} />}
             <div className="mt-6 mx-auto flex gap-2">
                <button 
                   type="button"

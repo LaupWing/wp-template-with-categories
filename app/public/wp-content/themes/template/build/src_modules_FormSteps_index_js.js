@@ -590,14 +590,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (({
+  formData
+}) => {
+  console.log(formData);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "flex flex-1"
+    className: "flex flex-1 flex-col"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-col"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     className: "text-sm"
-  }, "Op basis van uw ingevoerde gegevens hebben wij een schatting van het aantal m2 wanden en/of plafonds gemaakt")));
+  }, "Op basis van uw ingevoerde gegevens hebben wij een schatting van het aantal m2 wanden en/of plafonds gemaakt")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
+    className: "flex flex-col text-sm mt-4 divide-y"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
+    className: "grid grid-cols-2 gap-4 py-4"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flex justify-between"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("b", null, "Wanden")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "17 m\xB2")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flex justify-between"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("b", null, "25,- per m\xB2")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "250,-"))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
+    className: "grid grid-cols-2 gap-4 py-4"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flex justify-between"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("b", null, "Plafond")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "10 m\xB2")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flex justify-between"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("b", null, "25,- per m\xB2")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "250,-")))));
 });
 
 /***/ }),
@@ -759,7 +776,7 @@ const FormSteps = () => {
     }
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("form", {
     action: "",
-    className: "p-4 pt-6 flex-1 flex flex-col"
+    className: "sm:p-4 pt-6 flex-1 flex flex-col"
   }, currentStep === 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Steps_Step1__WEBPACK_IMPORTED_MODULE_1__["default"], {
     formData: formData,
     update: update
@@ -779,8 +796,7 @@ const FormSteps = () => {
     formData: formData,
     update: update
   }), currentStep === 6 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Steps_Step7__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    formData: formData,
-    update: update
+    formData: formData
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "mt-6 mx-auto flex gap-2"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
