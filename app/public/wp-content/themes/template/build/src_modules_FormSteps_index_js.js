@@ -596,6 +596,7 @@ __webpack_require__.r(__webpack_exports__);
   const price = 25;
   const rough_calculations_walls = Number(formData.step5.plafondhoogte) * Number(formData.step5.verdiepingen) * 4;
   const rough_calculations_ceiling = Number(formData.step5.woonoppervlak) * Number(formData.step5.verdiepingen);
+  const subtotal = rough_calculations_ceiling * price + rough_calculations_walls * price;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex flex-1 flex-col"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -616,7 +617,15 @@ __webpack_require__.r(__webpack_exports__);
     className: "flex justify-between"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("b", null, "Plafond")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, rough_calculations_ceiling, " m\xB2")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flex justify-between"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("b", null, "25,- per m\xB2")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, rough_calculations_ceiling * price, ",-")))));
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("b", null, "25,- per m\xB2")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, rough_calculations_ceiling * price, ",-"))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
+    className: "flex flex-col gap-4 py-4"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flex justify-between"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("b", null, "Subtotaal excl. BTW")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, subtotal, ",-")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flex justify-between"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("b", null, "BTW (21%)")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, subtotal * 0.21, ",-"))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
+    className: "flex justify-between gap-4 py-4"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("b", null, "Totaal incl. BTW")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, subtotal * 0.21 + subtotal, ",-"))));
 });
 
 /***/ }),
