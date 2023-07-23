@@ -2,6 +2,7 @@ export default ({
    name,
    value,
    label,
+   onChange,
    type = "text",
    className = "",
    ...props
@@ -16,6 +17,7 @@ export default ({
             name={name} 
             id={name} 
             value={value}
+            onChange={onChange}
          />
       </div>
    )
