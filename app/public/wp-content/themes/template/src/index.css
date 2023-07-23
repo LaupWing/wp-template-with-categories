@@ -39,6 +39,9 @@
    .current-menu-item > a, .current-page-ancestor > a {
       @apply font-bold;
    }
+   #mobile .current-menu-item, .current-page-ancestor {
+      @apply bg-accent-1/80 text-white p-1 rounded;
+   }
 
    .clipped {
       padding: 40px;
@@ -72,7 +75,7 @@
    }
 
    #mobile .menu {
-      @apply flex-col gap-4;
+      @apply flex flex-col gap-6 mt-10;
    }
 
    #mobile .menu .menu-item .sub-menu{
