@@ -767,7 +767,6 @@ const FormSteps = () => {
     if (localStorage.getItem("formData")) {
       const data = JSON.parse(localStorage.getItem("formData"));
       const index = getUnfinishedIndex(data);
-      console.log(index);
       setCurrentStep(index);
     }
   }, []);
